@@ -6,28 +6,34 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Code.Gameplay.Features.Level;
+
 public static class GameComponentsLookup {
 
     public const int Destructed = 0;
     public const int Id = 1;
-    public const int MeshRenderer = 2;
-    public const int Parented = 3;
-    public const int SelfDestructedTimer = 4;
-    public const int Transform = 5;
-    public const int Unparented = 6;
-    public const int View = 7;
-    public const int ViewParent = 8;
-    public const int ViewPath = 9;
-    public const int ViewPrefab = 10;
-    public const int WorldPosition = 11;
-    public const int TileTypeId = 12;
+    public const int Parented = 2;
+    public const int SelfDestructedTimer = 3;
+    public const int Transform = 4;
+    public const int Unparented = 5;
+    public const int View = 6;
+    public const int ViewParent = 7;
+    public const int ViewPath = 8;
+    public const int ViewPrefab = 9;
+    public const int WorldPosition = 10;
+    public const int Acorn = 11;
+    public const int Amanita = 12;
+    public const int Created = 13;
+    public const int LevelSize = 14;
+    public const int TilesInLevel = 15;
+    public const int TileTypeId = 16;
 
-    public const int TotalComponents = 13;
+    public const int TotalComponents = 17;
 
     public static readonly string[] componentNames = {
         "Destructed",
         "Id",
-        "MeshRenderer",
         "Parented",
         "SelfDestructedTimer",
         "Transform",
@@ -37,13 +43,17 @@ public static class GameComponentsLookup {
         "ViewPath",
         "ViewPrefab",
         "WorldPosition",
+        "Acorn",
+        "Amanita",
+        "Created",
+        "LevelSize",
+        "TilesInLevel",
         "TileTypeId"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(Code.Common.Destructed),
         typeof(Code.Common.Id),
-        typeof(Code.Common.MeshRendererComponent),
         typeof(Code.Common.Parented),
         typeof(Code.Common.SelfDestructedTimer),
         typeof(Code.Common.TransformComponent),
@@ -53,6 +63,11 @@ public static class GameComponentsLookup {
         typeof(Code.Common.ViewPath),
         typeof(Code.Common.ViewPrefab),
         typeof(Code.Common.WorldPosition),
+        typeof(Code.Gameplay.Features.Tile.Acorn),
+        typeof(Code.Gameplay.Features.Tile.Amanita),
+        typeof(Created),
+        typeof(LevelSize),
+        typeof(TilesInLevel),
         typeof(Code.Gameplay.Features.Tile.TileTypeIdComponent)
     };
 }

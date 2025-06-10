@@ -1,6 +1,7 @@
 using Code.Gameplay;
 using Code.Infrastructure.States.StateInfrastructure;
 using Code.Infrastructure.Systems;
+using UnityEngine;
 
 namespace Code.Infrastructure.States.GameStates
 {
@@ -20,6 +21,7 @@ namespace Code.Infrastructure.States.GameStates
 		public override void Enter()
 		{
 			_battleFeature = _systemsFactory.Create<BattleFeature>();
+
 			_battleFeature.Initialize();
 		}
 

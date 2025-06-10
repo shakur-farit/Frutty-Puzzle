@@ -26,6 +26,7 @@ namespace Code.StaticData
 		public async UniTask Load()
 		{ 
 			await LoadWindows();
+			await LoadTiles();
 		}
 
 		public WindowConfig GetWindowConfig(WindowId id)

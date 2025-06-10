@@ -16,7 +16,25 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 00cc488f608389146b16613c580c1bb4
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 11e09f77635147a4f898727ce379ec95
+    m_Address: Assets/StaticData/AcornTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69daa487c17f70842b946dd0fc4cecd8
+    m_Address: Assets/StaticData/AmanitaTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79056185319a58844a142f1c38b95579
+    m_Address: Assets/StaticData/Window/MainMenuWindowConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WindowConfig
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f7c649ad75609d04bab3e959ebc5a33b, type: 2}
   m_SchemaSet:
