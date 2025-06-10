@@ -1,3 +1,4 @@
+using Code.Gameplay.Common;
 using Code.Infrastructure.AsstesManagement;
 using Code.Infrastructure.Identifiers;
 using Code.Infrastructure.Loading;
@@ -6,6 +7,7 @@ using Code.Infrastructure.States.Factory;
 using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
 using Code.Infrastructure.Systems;
+using Code.Infrastructure.View.Factory;
 using Code.Meta.UI.Windows.Factory;
 using Code.Meta.UI.Windows.Service;
 using Code.Progress.Provider;
@@ -27,6 +29,7 @@ namespace Code.Infrastructure.Installers
 			BindCommonServices();
 			BindContexts();
 			BindGameplayServices();
+			BindGameplayFactories();
 			BindUIServices();
 			BindUIFactories();
 			BindCameraProvider();
@@ -59,9 +62,9 @@ namespace Code.Infrastructure.Installers
 
 		private void BindContexts()
 		{
-			//Container.Bind<Contexts>().FromInstance(Contexts.sharedInstance).AsSingle();
+			Container.Bind<Contexts>().FromInstance(Contexts.sharedInstance).AsSingle();
 
-			//Container.Bind<GameContext>().FromInstance(Contexts.sharedInstance.game).AsSingle();
+			Container.Bind<GameContext>().FromInstance(Contexts.sharedInstance.game).AsSingle();
 		}
 
 		private void BindCameraProvider()
@@ -82,6 +85,11 @@ namespace Code.Infrastructure.Installers
 		private void BindGameplayServices()
 		{
 			
+		}
+
+		private void BindGameplayFactories()
+		{
+			Container.Bind<IEntityViewFactory>().To<EntityViewFactory>().AsSingle();
 		}
 
 		private void BindUIServices()
