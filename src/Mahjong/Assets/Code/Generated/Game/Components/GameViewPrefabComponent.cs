@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Code.Infrastructure.View.Behaviours;
-
 public sealed partial class GameMatcher {
 
     static Entitas.IMatcher<GameEntity> _matcherViewPrefab;
@@ -36,21 +33,21 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Code.Gameplay.Common.ViewPrefab viewPrefab { get { return (Code.Gameplay.Common.ViewPrefab)GetComponent(GameComponentsLookup.ViewPrefab); } }
-    public EntityBehaviour ViewPrefab { get { return viewPrefab.Value; } }
+    public Code.Common.ViewPrefab viewPrefab { get { return (Code.Common.ViewPrefab)GetComponent(GameComponentsLookup.ViewPrefab); } }
+    public Code.Infrastructure.View.Behaviours.EntityBehaviour ViewPrefab { get { return viewPrefab.Value; } }
     public bool hasViewPrefab { get { return HasComponent(GameComponentsLookup.ViewPrefab); } }
 
-    public GameEntity AddViewPrefab(EntityBehaviour newValue) {
+    public GameEntity AddViewPrefab(Code.Infrastructure.View.Behaviours.EntityBehaviour newValue) {
         var index = GameComponentsLookup.ViewPrefab;
-        var component = (Code.Gameplay.Common.ViewPrefab)CreateComponent(index, typeof(Code.Gameplay.Common.ViewPrefab));
+        var component = (Code.Common.ViewPrefab)CreateComponent(index, typeof(Code.Common.ViewPrefab));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
     }
 
-    public GameEntity ReplaceViewPrefab(EntityBehaviour newValue) {
+    public GameEntity ReplaceViewPrefab(Code.Infrastructure.View.Behaviours.EntityBehaviour newValue) {
         var index = GameComponentsLookup.ViewPrefab;
-        var component = (Code.Gameplay.Common.ViewPrefab)CreateComponent(index, typeof(Code.Gameplay.Common.ViewPrefab));
+        var component = (Code.Common.ViewPrefab)CreateComponent(index, typeof(Code.Common.ViewPrefab));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

@@ -33,7 +33,7 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Code.Gameplay.Common.Destructed destructedComponent = new Code.Gameplay.Common.Destructed();
+    static readonly Code.Common.Destructed destructedComponent = new Code.Common.Destructed();
 
     public bool isDestructed {
         get { return HasComponent(GameComponentsLookup.Destructed); }

@@ -10,37 +10,49 @@ public static class GameComponentsLookup {
 
     public const int Destructed = 0;
     public const int Id = 1;
-    public const int Parented = 2;
-    public const int SelfDestructedTimer = 3;
-    public const int Unparented = 4;
-    public const int View = 5;
-    public const int ViewParent = 6;
-    public const int ViewPath = 7;
-    public const int ViewPrefab = 8;
+    public const int MeshRenderer = 2;
+    public const int Parented = 3;
+    public const int SelfDestructedTimer = 4;
+    public const int Transform = 5;
+    public const int Unparented = 6;
+    public const int View = 7;
+    public const int ViewParent = 8;
+    public const int ViewPath = 9;
+    public const int ViewPrefab = 10;
+    public const int WorldPosition = 11;
+    public const int TileTypeId = 12;
 
-    public const int TotalComponents = 9;
+    public const int TotalComponents = 13;
 
     public static readonly string[] componentNames = {
         "Destructed",
         "Id",
+        "MeshRenderer",
         "Parented",
         "SelfDestructedTimer",
+        "Transform",
         "Unparented",
         "View",
         "ViewParent",
         "ViewPath",
-        "ViewPrefab"
+        "ViewPrefab",
+        "WorldPosition",
+        "TileTypeId"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(Code.Gameplay.Common.Destructed),
-        typeof(Code.Gameplay.Common.Id),
-        typeof(Code.Gameplay.Common.Parented),
-        typeof(Code.Gameplay.Common.SelfDestructedTimer),
-        typeof(Code.Gameplay.Common.Unparented),
-        typeof(Code.Gameplay.Common.View),
-        typeof(Code.Gameplay.Common.ViewParent),
-        typeof(Code.Gameplay.Common.ViewPath),
-        typeof(Code.Gameplay.Common.ViewPrefab)
+        typeof(Code.Common.Destructed),
+        typeof(Code.Common.Id),
+        typeof(Code.Common.MeshRendererComponent),
+        typeof(Code.Common.Parented),
+        typeof(Code.Common.SelfDestructedTimer),
+        typeof(Code.Common.TransformComponent),
+        typeof(Code.Common.Unparented),
+        typeof(Code.Common.View),
+        typeof(Code.Common.ViewParent),
+        typeof(Code.Common.ViewPath),
+        typeof(Code.Common.ViewPrefab),
+        typeof(Code.Common.WorldPosition),
+        typeof(Code.Gameplay.Features.Tile.TileTypeIdComponent)
     };
 }

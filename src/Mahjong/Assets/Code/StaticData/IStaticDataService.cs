@@ -1,3 +1,5 @@
+using Code.Gameplay.Features.Tile;
+using Code.Gameplay.Features.Tile.Config;
 using Code.Infrastructure.States.GameStates;
 using Code.Meta.UI.Windows;
 using Code.Meta.UI.Windows.Config;
@@ -10,5 +12,6 @@ namespace Code.StaticData
 		UniTask Load();
 
 		WindowConfig GetWindowConfig(WindowId id);
+		TileConfig GetTileConfig(TileTypeId id);
 	}
 }

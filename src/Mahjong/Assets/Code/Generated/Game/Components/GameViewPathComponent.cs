@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Code.Gameplay.Common.ViewPath viewPath { get { return (Code.Gameplay.Common.ViewPath)GetComponent(GameComponentsLookup.ViewPath); } }
+    public Code.Common.ViewPath viewPath { get { return (Code.Common.ViewPath)GetComponent(GameComponentsLookup.ViewPath); } }
     public string ViewPath { get { return viewPath.Value; } }
     public bool hasViewPath { get { return HasComponent(GameComponentsLookup.ViewPath); } }
 
     public GameEntity AddViewPath(string newValue) {
         var index = GameComponentsLookup.ViewPath;
-        var component = (Code.Gameplay.Common.ViewPath)CreateComponent(index, typeof(Code.Gameplay.Common.ViewPath));
+        var component = (Code.Common.ViewPath)CreateComponent(index, typeof(Code.Common.ViewPath));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceViewPath(string newValue) {
         var index = GameComponentsLookup.ViewPath;
-        var component = (Code.Gameplay.Common.ViewPath)CreateComponent(index, typeof(Code.Gameplay.Common.ViewPath));
+        var component = (Code.Common.ViewPath)CreateComponent(index, typeof(Code.Common.ViewPath));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

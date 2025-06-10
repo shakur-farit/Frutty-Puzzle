@@ -33,7 +33,7 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Code.Gameplay.Common.Parented parentedComponent = new Code.Gameplay.Common.Parented();
+    static readonly Code.Common.Parented parentedComponent = new Code.Common.Parented();
 
     public bool isParented {
         get { return HasComponent(GameComponentsLookup.Parented); }

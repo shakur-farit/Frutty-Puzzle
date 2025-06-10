@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Code.Gameplay.Common.SelfDestructedTimer selfDestructedTimer { get { return (Code.Gameplay.Common.SelfDestructedTimer)GetComponent(GameComponentsLookup.SelfDestructedTimer); } }
+    public Code.Common.SelfDestructedTimer selfDestructedTimer { get { return (Code.Common.SelfDestructedTimer)GetComponent(GameComponentsLookup.SelfDestructedTimer); } }
     public float SelfDestructedTimer { get { return selfDestructedTimer.Value; } }
     public bool hasSelfDestructedTimer { get { return HasComponent(GameComponentsLookup.SelfDestructedTimer); } }
 
     public GameEntity AddSelfDestructedTimer(float newValue) {
         var index = GameComponentsLookup.SelfDestructedTimer;
-        var component = (Code.Gameplay.Common.SelfDestructedTimer)CreateComponent(index, typeof(Code.Gameplay.Common.SelfDestructedTimer));
+        var component = (Code.Common.SelfDestructedTimer)CreateComponent(index, typeof(Code.Common.SelfDestructedTimer));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceSelfDestructedTimer(float newValue) {
         var index = GameComponentsLookup.SelfDestructedTimer;
-        var component = (Code.Gameplay.Common.SelfDestructedTimer)CreateComponent(index, typeof(Code.Gameplay.Common.SelfDestructedTimer));
+        var component = (Code.Common.SelfDestructedTimer)CreateComponent(index, typeof(Code.Common.SelfDestructedTimer));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;
