@@ -18,35 +18,40 @@ namespace Code.Gameplay.Features.Grid.Factory
 			_staticDataService = staticDataService;
 		}
 
-		public GameEntity CreateGrid(GridTypeId typeId)
+		public GameEntity CreateGrid(GridTypeId id)
 		{
-			switch (typeId)
+			switch (id)
 			{
-				case GridTypeId.Square:
-					return CreateSquareGrid(typeId);
-				case GridTypeId.Rhombus:
-					return CreateRhombusGrid(typeId);
+				case GridTypeId.XSquare:
+					return CreateXSquareGrid(id);
+				case GridTypeId.FullRhombus:
+					return CreateFullRhombusGrid(id);
 			}
 
-			throw new Exception($"Grid with type id {typeId} does not exist");
+			throw new Exception($"Grid with type id {id} does not exist");
 		}
 
-		private GameEntity CreateSquareGrid(GridTypeId typeId) =>
-			CreateGridEntity(typeId)
-				.With(x => x.isSquare = true);
+		private GameEntity CreateXSquareGrid(GridTypeId id) =>
+			CreateGridEntity(id)
+				.With(x => x.isSquareLayout= true)
+				.With(x => x.isXMask =  true)
+			;
 
-		private GameEntity CreateRhombusGrid(GridTypeId typeId) =>
-			CreateGridEntity(typeId)
-				.With(x => x.isRhombus = true);
+		private GameEntity CreateFullRhombusGrid(GridTypeId id) =>
+			CreateGridEntity(id)
+				.With(x => x.isRhombusLayout = true)
+				.With(x => x.isFullMask = true)
+			;
 
-		private GameEntity CreateGridEntity(GridTypeId typeId)
+		private GameEntity CreateGridEntity(GridTypeId id)
 		{
-			GridConfig config = _staticDataService.GetGridConfig(typeId);
+			GridConfig config = _staticDataService.GetGridConfig(id);
 			CellSize cellSize = config.CellSize;
 
 			return CreateEntity.Empty()
 				.AddId(_identifier.Next())
 				.AddGridTypeId(config.Id)
+				.AddCellPositions(new())
 				.AddGridColumns(config.GridColumns)
 				.AddGridRows(config.GridRows)
 				.AddGridLayers(config.GridLayers)

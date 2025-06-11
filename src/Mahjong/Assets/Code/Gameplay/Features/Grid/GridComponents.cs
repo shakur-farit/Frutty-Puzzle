@@ -15,6 +15,13 @@ namespace Code.Gameplay.Features.Grid
 
 	[Game] public class CellPositions : IComponent { public List<Vector3> Value; }
 
-	[Game] public class Square : IComponent { }
-	[Game] public class Rhombus : IComponent { }
+	[Game] public class SquareLayout : IComponent { }
+	[Game] public class RhombusLayout : IComponent { }
+	[Game] public class TriangleLayout : IComponent { }
+
+	[Game] public class FullMask : IComponent { }
+	[Game] public class XMask : IComponent { }
+	[Game] public class StarMask : IComponent { }
+
+	[Game] public class Available : IComponent { }
 }

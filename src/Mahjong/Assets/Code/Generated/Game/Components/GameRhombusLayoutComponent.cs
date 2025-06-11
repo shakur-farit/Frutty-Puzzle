@@ -8,17 +8,17 @@
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherRhombus;
+    static Entitas.IMatcher<GameEntity> _matcherRhombusLayout;
 
-    public static Entitas.IMatcher<GameEntity> Rhombus {
+    public static Entitas.IMatcher<GameEntity> RhombusLayout {
         get {
-            if (_matcherRhombus == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Rhombus);
+            if (_matcherRhombusLayout == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.RhombusLayout);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherRhombus = matcher;
+                _matcherRhombusLayout = matcher;
             }
 
-            return _matcherRhombus;
+            return _matcherRhombusLayout;
         }
     }
 }
@@ -33,18 +33,18 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Code.Gameplay.Features.Grid.Rhombus rhombusComponent = new Code.Gameplay.Features.Grid.Rhombus();
+    static readonly Code.Gameplay.Features.Grid.RhombusLayout rhombusLayoutComponent = new Code.Gameplay.Features.Grid.RhombusLayout();
 
-    public bool isRhombus {
-        get { return HasComponent(GameComponentsLookup.Rhombus); }
+    public bool isRhombusLayout {
+        get { return HasComponent(GameComponentsLookup.RhombusLayout); }
         set {
-            if (value != isRhombus) {
-                var index = GameComponentsLookup.Rhombus;
+            if (value != isRhombusLayout) {
+                var index = GameComponentsLookup.RhombusLayout;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : rhombusComponent;
+                            : rhombusLayoutComponent;
 
                     AddComponent(index, component);
                 } else {

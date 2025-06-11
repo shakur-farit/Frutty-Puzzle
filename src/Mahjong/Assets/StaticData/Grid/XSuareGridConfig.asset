@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c2f2a7402b03aa469eb78c0731a4cbf, type: 3}
-  m_Name: RhombusGridConfig
+  m_Name: XSuareGridConfig
   m_EditorClassIdentifier: 
   Id: 2
-  GridColumns: 0
-  GridRows: 0
-  GridLayers: 0
+  GridColumns: 5
+  GridRows: 5
+  GridLayers: 3
   CellSize:
-    CellSizeX: 0
-    CellSizeY: 0
-    CellSizeZ: 0
+    CellSizeX: 1
+    CellSizeY: 1
+    CellSizeZ: 1

@@ -35,6 +35,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - WindowConfig
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9864b2f127949ff43ba3e09067f8105c
+    m_Address: Assets/StaticData/Grid/XSuareGridConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - GridConfig
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c921d89c46957c44daedbbda6cc5f5a9
     m_Address: Assets/StaticData/Grid/RhombusGridConfig.asset
     m_ReadOnly: 0

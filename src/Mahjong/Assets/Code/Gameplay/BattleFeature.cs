@@ -1,5 +1,5 @@
 using Code.Common.Destruct;
-using Code.Gameplay.Features.Level;
+using Code.Gameplay.Features.Grid;
 using Code.Gameplay.Features.Movement;
 using Code.Infrastructure.Systems;
 using Code.Infrastructure.View;
@@ -10,7 +10,7 @@ namespace Code.Gameplay
 	{
 		public BattleFeature(ISystemsFactory systems)
 		{
-			Add(systems.Create<LevelFeature>());
+			Add(systems.Create<GridFeature>());
 			Add(systems.Create<BindViewFeature>());
 			Add(systems.Create<MovementFeature>());
 

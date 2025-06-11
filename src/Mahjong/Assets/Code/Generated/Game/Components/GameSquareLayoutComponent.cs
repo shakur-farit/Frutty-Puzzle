@@ -8,17 +8,17 @@
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherCreated;
+    static Entitas.IMatcher<GameEntity> _matcherSquareLayout;
 
-    public static Entitas.IMatcher<GameEntity> Created {
+    public static Entitas.IMatcher<GameEntity> SquareLayout {
         get {
-            if (_matcherCreated == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Created);
+            if (_matcherSquareLayout == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.SquareLayout);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherCreated = matcher;
+                _matcherSquareLayout = matcher;
             }
 
-            return _matcherCreated;
+            return _matcherSquareLayout;
         }
     }
 }
@@ -33,18 +33,18 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Code.Gameplay.Features.Level.Created createdComponent = new Code.Gameplay.Features.Level.Created();
+    static readonly Code.Gameplay.Features.Grid.SquareLayout squareLayoutComponent = new Code.Gameplay.Features.Grid.SquareLayout();
 
-    public bool isCreated {
-        get { return HasComponent(GameComponentsLookup.Created); }
+    public bool isSquareLayout {
+        get { return HasComponent(GameComponentsLookup.SquareLayout); }
         set {
-            if (value != isCreated) {
-                var index = GameComponentsLookup.Created;
+            if (value != isSquareLayout) {
+                var index = GameComponentsLookup.SquareLayout;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : createdComponent;
+                            : squareLayoutComponent;
 
                     AddComponent(index, component);
                 } else {

@@ -1,12 +1,11 @@
-using Unity.VisualScripting.FullSerializer;
-
 namespace Code.Gameplay.Features.Grid
 {
 	public enum GridTypeId
 	{
 		Unknown = 0,
-		Square = 1,
-		Rhombus = 2,
-		Triangle = 3,
+		FullSquare = 1,
+		XSquare = 2,
+		StarSquare = 3,
+		FullRhombus = 4,
 	}
 }

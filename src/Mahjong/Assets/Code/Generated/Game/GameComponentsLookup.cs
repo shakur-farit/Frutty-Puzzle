@@ -19,24 +19,26 @@ public static class GameComponentsLookup {
     public const int ViewPath = 8;
     public const int ViewPrefab = 9;
     public const int WorldPosition = 10;
-    public const int CellPositions = 11;
-    public const int CellSizeX = 12;
-    public const int CellSizeY = 13;
-    public const int CellSizeZ = 14;
-    public const int GridColumns = 15;
-    public const int GridLayers = 16;
-    public const int GridRows = 17;
-    public const int GridTypeId = 18;
-    public const int Rhombus = 19;
-    public const int Square = 20;
-    public const int Created = 21;
-    public const int LevelSize = 22;
-    public const int TilesInLevel = 23;
-    public const int Acorn = 24;
-    public const int Amanita = 25;
-    public const int TileTypeId = 26;
+    public const int Available = 11;
+    public const int CellPositions = 12;
+    public const int CellSizeX = 13;
+    public const int CellSizeY = 14;
+    public const int CellSizeZ = 15;
+    public const int FullMask = 16;
+    public const int GridColumns = 17;
+    public const int GridLayers = 18;
+    public const int GridRows = 19;
+    public const int GridTypeId = 20;
+    public const int RhombusLayout = 21;
+    public const int SquareLayout = 22;
+    public const int StarMask = 23;
+    public const int TriangleLayout = 24;
+    public const int XMask = 25;
+    public const int Acorn = 26;
+    public const int Amanita = 27;
+    public const int TileTypeId = 28;
 
-    public const int TotalComponents = 27;
+    public const int TotalComponents = 29;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -50,19 +52,21 @@ public static class GameComponentsLookup {
         "ViewPath",
         "ViewPrefab",
         "WorldPosition",
+        "Available",
         "CellPositions",
         "CellSizeX",
         "CellSizeY",
         "CellSizeZ",
+        "FullMask",
         "GridColumns",
         "GridLayers",
         "GridRows",
         "GridTypeId",
-        "Rhombus",
-        "Square",
-        "Created",
-        "LevelSize",
-        "TilesInLevel",
+        "RhombusLayout",
+        "SquareLayout",
+        "StarMask",
+        "TriangleLayout",
+        "XMask",
         "Acorn",
         "Amanita",
         "TileTypeId"
@@ -80,19 +84,21 @@ public static class GameComponentsLookup {
         typeof(Code.Common.ViewPath),
         typeof(Code.Common.ViewPrefab),
         typeof(Code.Common.WorldPosition),
+        typeof(Code.Gameplay.Features.Grid.Available),
         typeof(Code.Gameplay.Features.Grid.CellPositions),
         typeof(Code.Gameplay.Features.Grid.CellSizeX),
         typeof(Code.Gameplay.Features.Grid.CellSizeY),
         typeof(Code.Gameplay.Features.Grid.CellSizeZ),
+        typeof(Code.Gameplay.Features.Grid.FullMask),
         typeof(Code.Gameplay.Features.Grid.GridColumns),
         typeof(Code.Gameplay.Features.Grid.GridLayers),
         typeof(Code.Gameplay.Features.Grid.GridRows),
         typeof(Code.Gameplay.Features.Grid.GridTypeIdComponent),
-        typeof(Code.Gameplay.Features.Grid.Rhombus),
-        typeof(Code.Gameplay.Features.Grid.Square),
-        typeof(Code.Gameplay.Features.Level.Created),
-        typeof(Code.Gameplay.Features.Level.LevelSize),
-        typeof(Code.Gameplay.Features.Level.TilesInLevel),
+        typeof(Code.Gameplay.Features.Grid.RhombusLayout),
+        typeof(Code.Gameplay.Features.Grid.SquareLayout),
+        typeof(Code.Gameplay.Features.Grid.StarMask),
+        typeof(Code.Gameplay.Features.Grid.TriangleLayout),
+        typeof(Code.Gameplay.Features.Grid.XMask),
         typeof(Code.Gameplay.Features.Tile.Acorn),
         typeof(Code.Gameplay.Features.Tile.Amanita),
         typeof(Code.Gameplay.Features.Tile.TileTypeIdComponent)

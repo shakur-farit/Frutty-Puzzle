@@ -1,7 +1,6 @@
 using Code.Gameplay;
 using Code.Infrastructure.States.StateInfrastructure;
 using Code.Infrastructure.Systems;
-using UnityEngine;
 
 namespace Code.Infrastructure.States.GameStates
 {

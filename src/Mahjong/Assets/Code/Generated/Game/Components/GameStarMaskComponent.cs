@@ -8,17 +8,17 @@
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherSquare;
+    static Entitas.IMatcher<GameEntity> _matcherStarMask;
 
-    public static Entitas.IMatcher<GameEntity> Square {
+    public static Entitas.IMatcher<GameEntity> StarMask {
         get {
-            if (_matcherSquare == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Square);
+            if (_matcherStarMask == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.StarMask);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherSquare = matcher;
+                _matcherStarMask = matcher;
             }
 
-            return _matcherSquare;
+            return _matcherStarMask;
         }
     }
 }
@@ -33,18 +33,18 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Code.Gameplay.Features.Grid.Square squareComponent = new Code.Gameplay.Features.Grid.Square();
+    static readonly Code.Gameplay.Features.Grid.StarMask starMaskComponent = new Code.Gameplay.Features.Grid.StarMask();
 
-    public bool isSquare {
-        get { return HasComponent(GameComponentsLookup.Square); }
+    public bool isStarMask {
+        get { return HasComponent(GameComponentsLookup.StarMask); }
         set {
-            if (value != isSquare) {
-                var index = GameComponentsLookup.Square;
+            if (value != isStarMask) {
+                var index = GameComponentsLookup.StarMask;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : squareComponent;
+                            : starMaskComponent;
 
                     AddComponent(index, component);
                 } else {
