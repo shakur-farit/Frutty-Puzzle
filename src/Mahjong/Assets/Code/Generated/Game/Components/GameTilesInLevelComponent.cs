@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Code.Gameplay.Features.Level;
-
 public sealed partial class GameMatcher {
 
     static Entitas.IMatcher<GameEntity> _matcherTilesInLevel;
@@ -36,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public TilesInLevel tilesInLevel { get { return (TilesInLevel)GetComponent(GameComponentsLookup.TilesInLevel); } }
+    public Code.Gameplay.Features.Level.TilesInLevel tilesInLevel { get { return (Code.Gameplay.Features.Level.TilesInLevel)GetComponent(GameComponentsLookup.TilesInLevel); } }
     public int TilesInLevel { get { return tilesInLevel.Value; } }
     public bool hasTilesInLevel { get { return HasComponent(GameComponentsLookup.TilesInLevel); } }
 
     public GameEntity AddTilesInLevel(int newValue) {
         var index = GameComponentsLookup.TilesInLevel;
-        var component = (TilesInLevel)CreateComponent(index, typeof(TilesInLevel));
+        var component = (Code.Gameplay.Features.Level.TilesInLevel)CreateComponent(index, typeof(Code.Gameplay.Features.Level.TilesInLevel));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -50,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceTilesInLevel(int newValue) {
         var index = GameComponentsLookup.TilesInLevel;
-        var component = (TilesInLevel)CreateComponent(index, typeof(TilesInLevel));
+        var component = (Code.Gameplay.Features.Level.TilesInLevel)CreateComponent(index, typeof(Code.Gameplay.Features.Level.TilesInLevel));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

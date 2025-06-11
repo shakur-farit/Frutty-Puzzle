@@ -8,17 +8,17 @@
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherCreated;
+    static Entitas.IMatcher<GameEntity> _matcherRhombus;
 
-    public static Entitas.IMatcher<GameEntity> Created {
+    public static Entitas.IMatcher<GameEntity> Rhombus {
         get {
-            if (_matcherCreated == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Created);
+            if (_matcherRhombus == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Rhombus);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherCreated = matcher;
+                _matcherRhombus = matcher;
             }
 
-            return _matcherCreated;
+            return _matcherRhombus;
         }
     }
 }
@@ -33,18 +33,18 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Code.Gameplay.Features.Level.Created createdComponent = new Code.Gameplay.Features.Level.Created();
+    static readonly Code.Gameplay.Features.Grid.Rhombus rhombusComponent = new Code.Gameplay.Features.Grid.Rhombus();
 
-    public bool isCreated {
-        get { return HasComponent(GameComponentsLookup.Created); }
+    public bool isRhombus {
+        get { return HasComponent(GameComponentsLookup.Rhombus); }
         set {
-            if (value != isCreated) {
-                var index = GameComponentsLookup.Created;
+            if (value != isRhombus) {
+                var index = GameComponentsLookup.Rhombus;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : createdComponent;
+                            : rhombusComponent;
 
                     AddComponent(index, component);
                 } else {

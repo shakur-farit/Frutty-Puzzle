@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Code.Gameplay.Features.Level;
-
 public static class GameComponentsLookup {
 
     public const int Destructed = 0;
@@ -22,14 +19,24 @@ public static class GameComponentsLookup {
     public const int ViewPath = 8;
     public const int ViewPrefab = 9;
     public const int WorldPosition = 10;
-    public const int Acorn = 11;
-    public const int Amanita = 12;
-    public const int Created = 13;
-    public const int LevelSize = 14;
-    public const int TilesInLevel = 15;
-    public const int TileTypeId = 16;
+    public const int CellPositions = 11;
+    public const int CellSizeX = 12;
+    public const int CellSizeY = 13;
+    public const int CellSizeZ = 14;
+    public const int GridColumns = 15;
+    public const int GridLayers = 16;
+    public const int GridRows = 17;
+    public const int GridTypeId = 18;
+    public const int Rhombus = 19;
+    public const int Square = 20;
+    public const int Created = 21;
+    public const int LevelSize = 22;
+    public const int TilesInLevel = 23;
+    public const int Acorn = 24;
+    public const int Amanita = 25;
+    public const int TileTypeId = 26;
 
-    public const int TotalComponents = 17;
+    public const int TotalComponents = 27;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -43,11 +50,21 @@ public static class GameComponentsLookup {
         "ViewPath",
         "ViewPrefab",
         "WorldPosition",
-        "Acorn",
-        "Amanita",
+        "CellPositions",
+        "CellSizeX",
+        "CellSizeY",
+        "CellSizeZ",
+        "GridColumns",
+        "GridLayers",
+        "GridRows",
+        "GridTypeId",
+        "Rhombus",
+        "Square",
         "Created",
         "LevelSize",
         "TilesInLevel",
+        "Acorn",
+        "Amanita",
         "TileTypeId"
     };
 
@@ -63,11 +80,21 @@ public static class GameComponentsLookup {
         typeof(Code.Common.ViewPath),
         typeof(Code.Common.ViewPrefab),
         typeof(Code.Common.WorldPosition),
+        typeof(Code.Gameplay.Features.Grid.CellPositions),
+        typeof(Code.Gameplay.Features.Grid.CellSizeX),
+        typeof(Code.Gameplay.Features.Grid.CellSizeY),
+        typeof(Code.Gameplay.Features.Grid.CellSizeZ),
+        typeof(Code.Gameplay.Features.Grid.GridColumns),
+        typeof(Code.Gameplay.Features.Grid.GridLayers),
+        typeof(Code.Gameplay.Features.Grid.GridRows),
+        typeof(Code.Gameplay.Features.Grid.GridTypeIdComponent),
+        typeof(Code.Gameplay.Features.Grid.Rhombus),
+        typeof(Code.Gameplay.Features.Grid.Square),
+        typeof(Code.Gameplay.Features.Level.Created),
+        typeof(Code.Gameplay.Features.Level.LevelSize),
+        typeof(Code.Gameplay.Features.Level.TilesInLevel),
         typeof(Code.Gameplay.Features.Tile.Acorn),
         typeof(Code.Gameplay.Features.Tile.Amanita),
-        typeof(Created),
-        typeof(LevelSize),
-        typeof(TilesInLevel),
         typeof(Code.Gameplay.Features.Tile.TileTypeIdComponent)
     };
 }

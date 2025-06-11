@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Code.Gameplay.Features.Level;
-
 public sealed partial class GameMatcher {
 
     static Entitas.IMatcher<GameEntity> _matcherLevelSize;
@@ -36,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public LevelSize levelSize { get { return (LevelSize)GetComponent(GameComponentsLookup.LevelSize); } }
+    public Code.Gameplay.Features.Level.LevelSize levelSize { get { return (Code.Gameplay.Features.Level.LevelSize)GetComponent(GameComponentsLookup.LevelSize); } }
     public float LevelSize { get { return levelSize.Value; } }
     public bool hasLevelSize { get { return HasComponent(GameComponentsLookup.LevelSize); } }
 
     public GameEntity AddLevelSize(float newValue) {
         var index = GameComponentsLookup.LevelSize;
-        var component = (LevelSize)CreateComponent(index, typeof(LevelSize));
+        var component = (Code.Gameplay.Features.Level.LevelSize)CreateComponent(index, typeof(Code.Gameplay.Features.Level.LevelSize));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -50,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceLevelSize(float newValue) {
         var index = GameComponentsLookup.LevelSize;
-        var component = (LevelSize)CreateComponent(index, typeof(LevelSize));
+        var component = (Code.Gameplay.Features.Level.LevelSize)CreateComponent(index, typeof(Code.Gameplay.Features.Level.LevelSize));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

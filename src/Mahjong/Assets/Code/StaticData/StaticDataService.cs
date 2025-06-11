@@ -3,6 +3,8 @@ using Cysharp.Threading.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Code.Gameplay.Features.Grid;
+using Code.Gameplay.Features.Grid.Config;
 using Code.Gameplay.Features.Tile;
 using Code.Gameplay.Features.Tile.Config;
 using Code.Meta.UI.Windows;
@@ -14,9 +16,11 @@ namespace Code.StaticData
 	{
 		private const string WindowConfigLabel = "WindowConfig";
 		private const string TileConfigLabel = "TileConfig";
+		private const string GridConfigLabel = "GridConfig";
 
 		private Dictionary<WindowId, WindowConfig> _windowById;
 		private Dictionary<TileTypeId, TileConfig> _tileById;
+		private Dictionary<GridTypeId, GridConfig>  _gridById;
 
 		private readonly IAssetProvider _assetProvider;
 
@@ -27,6 +31,7 @@ namespace Code.StaticData
 		{ 
 			await LoadWindows();
 			await LoadTiles();
+			await LoadGrids();
 		}
 
 		public WindowConfig GetWindowConfig(WindowId id)
@@ -45,6 +50,13 @@ namespace Code.StaticData
 			throw new Exception($"Tile config for {id} was not found");
 		}
 
+		public GridConfig GetGridConfig(GridTypeId id)
+		{
+			if (_gridById.TryGetValue(id, out GridConfig config))
+				return config;
+
+			throw new Exception($"Grid config for {id} was not found");
+		}
 		private async UniTask LoadWindows() =>
 			_windowById = (await _assetProvider.LoadAll<WindowConfig>(WindowConfigLabel))
 				.ToDictionary(x => x.Id, x => x);
@@ -52,5 +64,10 @@ namespace Code.StaticData
 		private async UniTask LoadTiles() =>
 			_tileById = (await _assetProvider.LoadAll<TileConfig>(TileConfigLabel))
 				.ToDictionary(x => x.Id, x => x);
+
+		private async UniTask LoadGrids() =>
+			_gridById = (await _assetProvider.LoadAll<GridConfig>(GridConfigLabel))
+				.ToDictionary(x => x.Id, x => x);
+
 	}
 }

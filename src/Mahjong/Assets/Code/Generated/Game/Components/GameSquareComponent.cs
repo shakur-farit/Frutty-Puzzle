@@ -8,17 +8,17 @@
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherCreated;
+    static Entitas.IMatcher<GameEntity> _matcherSquare;
 
-    public static Entitas.IMatcher<GameEntity> Created {
+    public static Entitas.IMatcher<GameEntity> Square {
         get {
-            if (_matcherCreated == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Created);
+            if (_matcherSquare == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Square);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherCreated = matcher;
+                _matcherSquare = matcher;
             }
 
-            return _matcherCreated;
+            return _matcherSquare;
         }
     }
 }
@@ -33,18 +33,18 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Code.Gameplay.Features.Level.Created createdComponent = new Code.Gameplay.Features.Level.Created();
+    static readonly Code.Gameplay.Features.Grid.Square squareComponent = new Code.Gameplay.Features.Grid.Square();
 
-    public bool isCreated {
-        get { return HasComponent(GameComponentsLookup.Created); }
+    public bool isSquare {
+        get { return HasComponent(GameComponentsLookup.Square); }
         set {
-            if (value != isCreated) {
-                var index = GameComponentsLookup.Created;
+            if (value != isSquare) {
+                var index = GameComponentsLookup.Square;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : createdComponent;
+                            : squareComponent;
 
                     AddComponent(index, component);
                 } else {

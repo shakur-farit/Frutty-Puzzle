@@ -35,6 +35,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - WindowConfig
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c921d89c46957c44daedbbda6cc5f5a9
+    m_Address: Assets/StaticData/Grid/RhombusGridConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - GridConfig
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f7c649ad75609d04bab3e959ebc5a33b, type: 2}
   m_SchemaSet:
