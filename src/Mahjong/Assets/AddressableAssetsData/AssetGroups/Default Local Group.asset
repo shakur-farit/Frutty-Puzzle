@@ -29,6 +29,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - TileConfig
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3bdf7e14aba266b458a130f41589857a
+    m_Address: Assets/StaticData/Level/FirstLevelConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54135fc0460a9f14096fcf5743b0358e
+    m_Address: Assets/StaticData/Grid/FullSuareGridConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - GridConfig
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 69daa487c17f70842b946dd0fc4cecd8
     m_Address: Assets/StaticData/AmanitaTileConfig.asset
     m_ReadOnly: 0
@@ -46,6 +58,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - GridConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae3d601dd95c2cc4ab5b553ff417e6e7
+    m_Address: Assets/StaticData/Level/SecondLevelConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelConfig
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c921d89c46957c44daedbbda6cc5f5a9
     m_Address: Assets/StaticData/Grid/RhombusGridConfig.asset

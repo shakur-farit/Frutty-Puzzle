@@ -13,12 +13,6 @@ namespace Code.Gameplay.Features.Grid.Config
 		public CellSize CellSize;
 	}
 
-	public class GridStrategy
-	{
-		public GridLayoutTypeId LayoutTypeId;
-		public GridMaskTypeId MaskTypeId;
-	}
-
 	[Serializable]
 	public class CellSize
 	{

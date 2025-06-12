@@ -10,7 +10,6 @@ namespace Code.Gameplay.Features.Grid
 			Add(systems.Create<GridSquareLayoutSystem>());
 			Add(systems.Create<GridRhombusLayoutSystem>());
 			Add(systems.Create<GridTriangleLayoutSystem>());
-			Add(systems.Create<GridXMaskSystem>());
 		}
 	}
 }

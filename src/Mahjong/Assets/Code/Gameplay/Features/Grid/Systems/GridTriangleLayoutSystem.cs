@@ -35,6 +35,8 @@ namespace Code.Gameplay.Features.Grid.Systems
 
 				grid.ReplaceCellPositions(positions);
 
+				TryVisualizeGrid(positions);
+
 				grid.isAvailable = true;
 			}
 		}
@@ -138,6 +140,17 @@ namespace Code.Gameplay.Features.Grid.Systems
 				index += totalCols - r;
 			}
 			return index + col;
+		}
+
+		private void TryVisualizeGrid(List<Vector3> positions)
+		{
+			GameObject visualizerObj = GameObject.Find("Grid Debug");
+			if (visualizerObj == null)
+				return;
+
+			GridVisualizer visualizer = visualizerObj.GetComponent<GridVisualizer>();
+			if (visualizer != null)
+				visualizer.SetPositions(positions);
 		}
 	}
 }

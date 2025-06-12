@@ -1,5 +1,7 @@
 using Code.Gameplay.Features.Grid;
 using Code.Gameplay.Features.Grid.Config;
+using Code.Gameplay.Features.Level;
+using Code.Gameplay.Features.Level.Config;
 using Code.Gameplay.Features.Tile;
 using Code.Gameplay.Features.Tile.Config;
 using Code.Meta.UI.Windows;
@@ -15,5 +17,6 @@ namespace Code.StaticData
 		WindowConfig GetWindowConfig(WindowId id);
 		TileConfig GetTileConfig(TileTypeId id);
 		GridConfig GetGridConfig(GridTypeId id);
+		LevelConfig GetLevelConfig(LevelId id);
 	}
 }

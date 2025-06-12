@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 00cc488f608389146b16613c580c1bb4
   m_currentHash:
     serializedVersion: 2
-    Hash: 51ae5664f1d7f2533573f701af974f0a
+    Hash: 96a56b3a1ba4e3ea85d6580066989c9d
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -90,6 +90,7 @@ MonoBehaviour:
     - TileConfig
     - WindowConfig
     - GridConfig
+    - LevelConfig
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 5e9758a37a5dca04c865f8f5dae2685d, type: 2}

@@ -35,11 +35,15 @@ public static class GameComponentsLookup {
     public const int StarMask = 24;
     public const int TriangleLayout = 25;
     public const int XMask = 26;
-    public const int Acorn = 27;
-    public const int Amanita = 28;
-    public const int TileTypeId = 29;
+    public const int GridTypeOnLevel = 27;
+    public const int LevelAvailable = 28;
+    public const int LevelId = 29;
+    public const int TilePairsOnLevel = 30;
+    public const int Acorn = 31;
+    public const int Amanita = 32;
+    public const int TileTypeId = 33;
 
-    public const int TotalComponents = 30;
+    public const int TotalComponents = 34;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -69,6 +73,10 @@ public static class GameComponentsLookup {
         "StarMask",
         "TriangleLayout",
         "XMask",
+        "GridTypeOnLevel",
+        "LevelAvailable",
+        "LevelId",
+        "TilePairsOnLevel",
         "Acorn",
         "Amanita",
         "TileTypeId"
@@ -102,6 +110,10 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Grid.StarMask),
         typeof(Code.Gameplay.Features.Grid.TriangleLayout),
         typeof(Code.Gameplay.Features.Grid.XMask),
+        typeof(Code.Gameplay.Features.Level.GridTypeOnLevel),
+        typeof(Code.Gameplay.Features.Level.LevelAvailable),
+        typeof(Code.Gameplay.Features.Level.LevelIdComponent),
+        typeof(Code.Gameplay.Features.Level.TilePairsOnLevel),
         typeof(Code.Gameplay.Features.Tile.Acorn),
         typeof(Code.Gameplay.Features.Tile.Amanita),
         typeof(Code.Gameplay.Features.Tile.TileTypeIdComponent)

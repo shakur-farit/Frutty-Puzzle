@@ -2,6 +2,7 @@ using Code.Gameplay.Common.Collisions;
 using Code.Gameplay.Common.Time;
 using Code.Gameplay.Features.Grid.Factory;
 using Code.Gameplay.Features.Grid.Systems;
+using Code.Gameplay.Features.Level.Factory;
 using Code.Gameplay.Features.Tile.Factory;
 using Code.Infrastructure.AsstesManagement;
 using Code.Infrastructure.Identifiers;
@@ -96,6 +97,7 @@ namespace Code.Infrastructure.Installers
 			Container.Bind<IEntityViewFactory>().To<EntityViewFactory>().AsSingle();
 			Container.Bind<ITileFactory>().To<TileFactory>().AsSingle();
 			Container.Bind<IGridFactory>().To<GridFactory>().AsSingle();
+			Container.Bind<ILevelFactory>().To<LevelFactory>().AsSingle();
 		}
 
 		private void BindUIServices()

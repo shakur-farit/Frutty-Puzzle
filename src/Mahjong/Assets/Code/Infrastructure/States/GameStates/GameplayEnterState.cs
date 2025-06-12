@@ -1,5 +1,5 @@
-using Code.Gameplay.Features.Grid;
-using Code.Gameplay.Features.Grid.Factory;
+using Code.Gameplay.Features.Level;
+using Code.Gameplay.Features.Level.Factory;
 using Code.Infrastructure.States.StateInfrastructure;
 using Code.Infrastructure.States.StateMachine;
 
@@ -8,17 +8,17 @@ namespace Code.Infrastructure.States.GameStates
 	public class GameplayEnterState : SimpleState
 	{
 		private readonly IGameStateMachine _stateMachine;
-		private readonly IGridFactory _gridFactory;
+		private readonly ILevelFactory _levelFactory;
 
-		public GameplayEnterState(IGameStateMachine stateMachine, IGridFactory gridFactory)
+		public GameplayEnterState(IGameStateMachine stateMachine, ILevelFactory levelFactory)
 		{
 			_stateMachine = stateMachine;
-			_gridFactory = gridFactory;
+			_levelFactory = levelFactory;
 		}
 
 		public override void Enter()
 		{
-			_gridFactory.CreateGrid(GridTypeId.FullTriangle);
+			_levelFactory.CreateLevel(LevelId.Second);
 
 			EnterToBattleLoop();
 		}
