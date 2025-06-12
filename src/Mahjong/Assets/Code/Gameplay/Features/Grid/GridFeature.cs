@@ -8,6 +8,8 @@ namespace Code.Gameplay.Features.Grid
 		public GridFeature(ISystemsFactory systems)
 		{
 			Add(systems.Create<GridSquareLayoutSystem>());
+			Add(systems.Create<GridRhombusLayoutSystem>());
+			Add(systems.Create<GridTriangleLayoutSystem>());
 		}
 	}
 }

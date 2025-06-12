@@ -18,7 +18,7 @@ namespace Code.Infrastructure.States.GameStates
 
 		public override void Enter()
 		{
-			_gridFactory.CreateGrid(GridTypeId.XSquare);
+			_gridFactory.CreateGrid(GridTypeId.FullTriangle);
 
 			EnterToBattleLoop();
 		}

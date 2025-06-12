@@ -26,6 +26,8 @@ namespace Code.Gameplay.Features.Grid.Factory
 					return CreateXSquareGrid(id);
 				case GridTypeId.FullRhombus:
 					return CreateFullRhombusGrid(id);
+				case GridTypeId.FullTriangle:
+					return CreateFullTriangleGrid(id);
 			}
 
 			throw new Exception($"Grid with type id {id} does not exist");
@@ -42,6 +44,12 @@ namespace Code.Gameplay.Features.Grid.Factory
 				.With(x => x.isRhombusLayout = true)
 				.With(x => x.isFullMask = true)
 			;
+
+		private GameEntity CreateFullTriangleGrid(GridTypeId id) =>
+			CreateGridEntity(id)
+				.With(x => x.isTriangleLayout = true)
+				.With(x => x.isFullMask = true)
+		;
 
 		private GameEntity CreateGridEntity(GridTypeId id)
 		{

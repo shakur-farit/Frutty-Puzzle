@@ -1,6 +1,7 @@
 using Code.Gameplay.Common.Collisions;
 using Code.Gameplay.Common.Time;
 using Code.Gameplay.Features.Grid.Factory;
+using Code.Gameplay.Features.Grid.Systems;
 using Code.Gameplay.Features.Tile.Factory;
 using Code.Infrastructure.AsstesManagement;
 using Code.Infrastructure.Identifiers;
@@ -87,7 +88,7 @@ namespace Code.Infrastructure.Installers
 
 		private void BindGameplayServices()
 		{
-			
+			Container.Bind<IGridLayerCentroid>().To<GridLayerCentroid>().AsSingle();
 		}
 
 		private void BindGameplayFactories()

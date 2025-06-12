@@ -4,19 +4,19 @@ using UnityEngine;
 
 namespace Code.Gameplay.Features.Grid.Systems
 {
-	public class GridSquareLayoutSystem : IExecuteSystem
+	public class GridRhombusLayoutSystem : IExecuteSystem
 	{
 		private readonly IGroup<GameEntity> _grids;
 		private readonly List<GameEntity> _buffer = new(1);
 
 		private readonly IGridLayerCentroid _centroid;
 
-		public GridSquareLayoutSystem(GameContext game, IGridLayerCentroid centroid)
+		public GridRhombusLayoutSystem(GameContext game, IGridLayerCentroid centroid)
 		{
 			_centroid = centroid;
 			_grids = game.GetGroup(GameMatcher
 				.AllOf(
-					GameMatcher.SquareLayout,
+					GameMatcher.RhombusLayout,
 					GameMatcher.GridColumns,
 					GameMatcher.GridRows,
 					GameMatcher.GridLayers,
@@ -30,9 +30,10 @@ namespace Code.Gameplay.Features.Grid.Systems
 		{
 			foreach (GameEntity grid in _grids.GetEntities(_buffer))
 			{
+				Debug.Log("Here");
+
 				List<Vector3> positions = GetPositions(
-					grid.GridColumns, grid.GridRows, grid.GridLayers, 
-					grid.CellSizeX, grid.CellSizeY, grid.CellSizeZ);
+					grid.GridColumns, grid.GridRows, grid.GridLayers, grid.CellSizeX, grid.CellSizeY, grid.CellSizeZ);
 
 				grid.ReplaceCellPositions(positions);
 				TryVisualizeGrid(positions);
@@ -63,12 +64,10 @@ namespace Code.Gameplay.Features.Grid.Systems
 			{
 				for (int col = 0; col < columns; col++)
 				{
-					Vector3 pos = new Vector3(
-						col * sizeX,
-						0f,
-						row * sizeZ
-					);
+					float x = (col - row) * sizeX;
+					float z = (col + row) * sizeZ;
 
+					Vector3 pos = new Vector3(x, 0f, z);
 					baseLayer.Add(pos);
 					result.Add(pos);
 				}
@@ -91,11 +90,11 @@ namespace Code.Gameplay.Features.Grid.Systems
 		{
 			List<Vector3> nextLayer = new();
 
-			int cols = columns - layer;
-			int rws = rows - layer;
 			int baseCols = columns - (layer - 1);
+			int cols = columns - layer;
+			int rowsL = rows - layer;
 
-			for (int row = 0; row < rws; row++)
+			for (int row = 0; row < rowsL; row++)
 			{
 				for (int col = 0; col < cols; col++)
 				{
@@ -121,7 +120,7 @@ namespace Code.Gameplay.Features.Grid.Systems
 			int i11 = (row + 1) * baseCols + (col + 1);
 
 			return i00 < currentLayer.Count && i01 < currentLayer.Count &&
-			       i10 < currentLayer.Count && i11 < currentLayer.Count;
+						 i10 < currentLayer.Count && i11 < currentLayer.Count;
 		}
 
 		private Vector3 CalculateCellCenter(List<Vector3> currentLayer, int row, int col, int baseCols)

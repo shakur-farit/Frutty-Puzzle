@@ -7,5 +7,6 @@ namespace Code.Gameplay.Features.Grid
 		XSquare = 2,
 		StarSquare = 3,
 		FullRhombus = 4,
+		FullTriangle = 5,
 	}
 }
