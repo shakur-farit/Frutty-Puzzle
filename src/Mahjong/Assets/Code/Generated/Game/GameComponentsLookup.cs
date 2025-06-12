@@ -25,20 +25,21 @@ public static class GameComponentsLookup {
     public const int CellSizeY = 14;
     public const int CellSizeZ = 15;
     public const int FullMask = 16;
-    public const int GridColumns = 17;
-    public const int GridLayers = 18;
-    public const int GridRows = 19;
-    public const int GridTypeId = 20;
-    public const int RhombusLayout = 21;
-    public const int SquareLayout = 22;
-    public const int StarMask = 23;
-    public const int TriangleLayout = 24;
-    public const int XMask = 25;
-    public const int Acorn = 26;
-    public const int Amanita = 27;
-    public const int TileTypeId = 28;
+    public const int Grid = 17;
+    public const int GridColumns = 18;
+    public const int GridLayers = 19;
+    public const int GridRows = 20;
+    public const int GridTypeId = 21;
+    public const int RhombusLayout = 22;
+    public const int SquareLayout = 23;
+    public const int StarMask = 24;
+    public const int TriangleLayout = 25;
+    public const int XMask = 26;
+    public const int Acorn = 27;
+    public const int Amanita = 28;
+    public const int TileTypeId = 29;
 
-    public const int TotalComponents = 29;
+    public const int TotalComponents = 30;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -58,6 +59,7 @@ public static class GameComponentsLookup {
         "CellSizeY",
         "CellSizeZ",
         "FullMask",
+        "Grid",
         "GridColumns",
         "GridLayers",
         "GridRows",
@@ -90,6 +92,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Grid.CellSizeY),
         typeof(Code.Gameplay.Features.Grid.CellSizeZ),
         typeof(Code.Gameplay.Features.Grid.FullMask),
+        typeof(Code.Gameplay.Features.Grid.Grid),
         typeof(Code.Gameplay.Features.Grid.GridColumns),
         typeof(Code.Gameplay.Features.Grid.GridLayers),
         typeof(Code.Gameplay.Features.Grid.GridRows),

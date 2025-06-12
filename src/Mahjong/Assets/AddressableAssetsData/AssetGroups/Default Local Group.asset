@@ -17,6 +17,12 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 00cc488f608389146b16613c580c1bb4
   m_SerializeEntries:
+  - m_GUID: 0c3cbec61ae5fed4da045c5b5725b4f2
+    m_Address: Assets/StaticData/Grid/FullTriangleGridConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - GridConfig
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 11e09f77635147a4f898727ce379ec95
     m_Address: Assets/StaticData/AcornTileConfig.asset
     m_ReadOnly: 0

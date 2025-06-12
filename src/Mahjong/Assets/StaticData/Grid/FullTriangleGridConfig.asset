@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2f2a7402b03aa469eb78c0731a4cbf, type: 3}
   m_Name: FullTriangleGridConfig
   m_EditorClassIdentifier: 
-  Id: 4
+  Id: 5
   GridColumns: 5
   GridRows: 5
   GridLayers: 3

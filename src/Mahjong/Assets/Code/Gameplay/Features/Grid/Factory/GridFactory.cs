@@ -66,6 +66,7 @@ namespace Code.Gameplay.Features.Grid.Factory
 				.AddCellSizeX(cellSize.CellSizeX)
 				.AddCellSizeY(cellSize.CellSizeY)
 				.AddCellSizeZ(cellSize.CellSizeZ)
+				.With(x => x.isGrid = true)
 				;
 		}
 	}

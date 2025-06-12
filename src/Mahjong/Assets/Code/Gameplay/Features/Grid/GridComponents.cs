@@ -5,6 +5,7 @@ using UnityEngine;
 namespace Code.Gameplay.Features.Grid
 {
 	[Game] public class GridTypeIdComponent : IComponent { public GridTypeId Value; }
+	[Game] public class Grid : IComponent { }
 
 	[Game] public class GridColumns : IComponent { public int Value; }
 	[Game] public class GridRows : IComponent { public int Value; }
