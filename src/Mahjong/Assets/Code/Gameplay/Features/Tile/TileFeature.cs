@@ -6,6 +6,8 @@ namespace Code.Gameplay.Features.Tile
 	{
 		public TileFeature(ISystemsFactory systems)
 		{
+			Add(systems.Create<TilesCollectorInitializeSystem>());
+
 			Add(systems.Create<CreateTileSystem>());
 		}
 	}

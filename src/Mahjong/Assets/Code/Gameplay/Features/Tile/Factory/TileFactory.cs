@@ -43,7 +43,7 @@ namespace Code.Gameplay.Features.Tile.Factory
 		private GameEntity CreateTileEntity(TileTypeId typeId, Vector3 at)
 		{
 			TileConfig config = _staticDataService.GetTileConfig(typeId);
-			Debug.Log(config);
+
 			return CreateEntity.Empty()
 					.AddId(_identifier.Next())
 					.AddTileTypeId(typeId)

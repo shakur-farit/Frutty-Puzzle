@@ -4,6 +4,7 @@ using Code.Gameplay.Features.Grid.Factory;
 using Code.Gameplay.Features.Grid.Systems;
 using Code.Gameplay.Features.Level.Factory;
 using Code.Gameplay.Features.Tile.Factory;
+using Code.Gameplay.Input.Services;
 using Code.Infrastructure.AsstesManagement;
 using Code.Infrastructure.Identifiers;
 using Code.Infrastructure.Loading;
@@ -90,6 +91,7 @@ namespace Code.Infrastructure.Installers
 		private void BindGameplayServices()
 		{
 			Container.Bind<IGridLayerCentroid>().To<GridLayerCentroid>().AsSingle();
+			Container.Bind<IInputService>().To<StandaloneInputService>().AsSingle();
 		}
 
 		private void BindGameplayFactories()
@@ -130,7 +132,7 @@ namespace Code.Infrastructure.Installers
 		{
 			Container.Bind<IRandomService>().To<UnityRandomService>().AsSingle();
 			Container.Bind<ICollisionRegistry>().To<CollisionRegistry>().AsSingle();
-			//Container.Bind<IPhysicsService>().To<PhysicsService>().AsSingle();
+			Container.Bind<IPhysicsService>().To<PhysicsService>().AsSingle();
 			Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
 			Container.Bind<ITimeService>().To<UnityTimeService>().AsSingle();
 		}

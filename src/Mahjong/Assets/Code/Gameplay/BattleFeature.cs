@@ -2,7 +2,9 @@ using Code.Common.Destruct;
 using Code.Gameplay.Features.Grid;
 using Code.Gameplay.Features.Level;
 using Code.Gameplay.Features.Movement;
+using Code.Gameplay.Features.TargetsCollection;
 using Code.Gameplay.Features.Tile;
+using Code.Gameplay.Input;
 using Code.Infrastructure.Systems;
 using Code.Infrastructure.View;
 
@@ -16,6 +18,8 @@ namespace Code.Gameplay
 			Add(systems.Create<GridFeature>());
 			Add(systems.Create<TileFeature>());
 			Add(systems.Create<BindViewFeature>());
+			Add(systems.Create<InputFeature>());
+			Add(systems.Create<TargetsCollectionFeature>());
 			Add(systems.Create<MovementFeature>());
 
 			Add(systems.Create<ProcessGameDestructedFeature>());
