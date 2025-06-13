@@ -49,6 +49,7 @@ namespace Code.Gameplay.Features.Tile.Factory
 					.AddTileTypeId(typeId)
 					.AddViewPrefab(config.PrefabView)
 					.AddWorldPosition(at)
+					.With(x => x.isTile = true)
 				;
 		}
 	}

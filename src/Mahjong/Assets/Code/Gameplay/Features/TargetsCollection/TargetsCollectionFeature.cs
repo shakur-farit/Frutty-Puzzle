@@ -7,7 +7,7 @@ namespace Code.Gameplay.Features.TargetsCollection
 	{
 		public TargetsCollectionFeature(ISystemsFactory systems)
 		{
-			Add(systems.Create<CollectTargetOnButtonMouseClickSystem>());
+			Add(systems.Create<CollectTargetOnButtonMouseClickLimitSystem>());
 		}
 	}
 }

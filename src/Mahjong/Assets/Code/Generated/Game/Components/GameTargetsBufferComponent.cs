@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Code.Gameplay.Features.TargetsCollection;
-
 public sealed partial class GameMatcher {
 
     static Entitas.IMatcher<GameEntity> _matcherTargetsBuffer;
@@ -36,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public TargetCollectionComponents.TargetsBuffer targetsBuffer { get { return (TargetCollectionComponents.TargetsBuffer)GetComponent(GameComponentsLookup.TargetsBuffer); } }
+    public Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.TargetsBuffer targetsBuffer { get { return (Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.TargetsBuffer)GetComponent(GameComponentsLookup.TargetsBuffer); } }
     public System.Collections.Generic.List<int> TargetsBuffer { get { return targetsBuffer.Value; } }
     public bool hasTargetsBuffer { get { return HasComponent(GameComponentsLookup.TargetsBuffer); } }
 
     public GameEntity AddTargetsBuffer(System.Collections.Generic.List<int> newValue) {
         var index = GameComponentsLookup.TargetsBuffer;
-        var component = (TargetCollectionComponents.TargetsBuffer)CreateComponent(index, typeof(TargetCollectionComponents.TargetsBuffer));
+        var component = (Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.TargetsBuffer)CreateComponent(index, typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.TargetsBuffer));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -50,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceTargetsBuffer(System.Collections.Generic.List<int> newValue) {
         var index = GameComponentsLookup.TargetsBuffer;
-        var component = (TargetCollectionComponents.TargetsBuffer)CreateComponent(index, typeof(TargetCollectionComponents.TargetsBuffer));
+        var component = (Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.TargetsBuffer)CreateComponent(index, typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.TargetsBuffer));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

@@ -11,7 +11,9 @@ namespace Code.Gameplay
 		{
 			CreateEntity.Empty()
 				.AddTargetsBuffer(new List<int>())
-				.AddLayerMask(CollisionLayer.Tile.AsMask());
+				.AddLayerMask(CollisionLayer.Tile.AsMask())
+				.AddTargetsLimit(2)
+				;
 		}
 	}
 }

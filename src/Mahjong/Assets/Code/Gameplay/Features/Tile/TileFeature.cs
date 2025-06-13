@@ -9,6 +9,7 @@ namespace Code.Gameplay.Features.Tile
 			Add(systems.Create<TilesCollectorInitializeSystem>());
 
 			Add(systems.Create<CreateTileSystem>());
+			Add(systems.Create<SelectProcessedTilesSystem>());
 		}
 	}
 }

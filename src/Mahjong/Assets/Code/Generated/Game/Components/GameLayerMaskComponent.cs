@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Code.Gameplay.Features.TargetsCollection;
-
 public sealed partial class GameMatcher {
 
     static Entitas.IMatcher<GameEntity> _matcherLayerMask;
@@ -36,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public TargetCollectionComponents.LayerMask layerMask { get { return (TargetCollectionComponents.LayerMask)GetComponent(GameComponentsLookup.LayerMask); } }
+    public Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.LayerMask layerMask { get { return (Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.LayerMask)GetComponent(GameComponentsLookup.LayerMask); } }
     public int LayerMask { get { return layerMask.Value; } }
     public bool hasLayerMask { get { return HasComponent(GameComponentsLookup.LayerMask); } }
 
     public GameEntity AddLayerMask(int newValue) {
         var index = GameComponentsLookup.LayerMask;
-        var component = (TargetCollectionComponents.LayerMask)CreateComponent(index, typeof(TargetCollectionComponents.LayerMask));
+        var component = (Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.LayerMask)CreateComponent(index, typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.LayerMask));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -50,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceLayerMask(int newValue) {
         var index = GameComponentsLookup.LayerMask;
-        var component = (TargetCollectionComponents.LayerMask)CreateComponent(index, typeof(TargetCollectionComponents.LayerMask));
+        var component = (Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.LayerMask)CreateComponent(index, typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.LayerMask));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

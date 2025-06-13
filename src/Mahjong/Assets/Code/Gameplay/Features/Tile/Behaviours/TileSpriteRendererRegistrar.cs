@@ -26,7 +26,8 @@ namespace Code.Gameplay.Features.Tile.Behaviours
 
 		public override void UnregisterComponents()
 		{
-			throw new System.NotImplementedException();
+			if (Entity.hasTileSpriteRenderer)
+				Entity.RemoveTileSpriteRenderer();
 		}
 	}
 }

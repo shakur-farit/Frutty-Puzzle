@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Code.Gameplay.Features.TargetsCollection;
-
 public static class GameComponentsLookup {
 
     public const int Destructed = 0;
@@ -42,18 +39,24 @@ public static class GameComponentsLookup {
     public const int LevelAvailable = 28;
     public const int LevelId = 29;
     public const int TilePairsOnLevel = 30;
-    public const int Acorn = 31;
-    public const int Amanita = 32;
-    public const int TileSpriteRenderer = 33;
-    public const int TileTypeId = 34;
-    public const int Camera = 35;
-    public const int Input = 36;
-    public const int LeftMouseClicked = 37;
-    public const int ScreenMousePosition = 38;
-    public const int LayerMask = 39;
-    public const int TargetsBuffer = 40;
+    public const int Full = 31;
+    public const int LayerMask = 32;
+    public const int ProcessedTarget = 33;
+    public const int TargetsBuffer = 34;
+    public const int TargetsLimit = 35;
+    public const int Acorn = 36;
+    public const int Amanita = 37;
+    public const int Selected = 38;
+    public const int Tile = 39;
+    public const int TileSelectIcon = 40;
+    public const int TileSpriteRenderer = 41;
+    public const int TileTypeId = 42;
+    public const int Camera = 43;
+    public const int Input = 44;
+    public const int LeftMouseClicked = 45;
+    public const int ScreenMousePosition = 46;
 
-    public const int TotalComponents = 41;
+    public const int TotalComponents = 47;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -87,16 +90,22 @@ public static class GameComponentsLookup {
         "LevelAvailable",
         "LevelId",
         "TilePairsOnLevel",
+        "Full",
+        "LayerMask",
+        "ProcessedTarget",
+        "TargetsBuffer",
+        "TargetsLimit",
         "Acorn",
         "Amanita",
+        "Selected",
+        "Tile",
+        "TileSelectIcon",
         "TileSpriteRenderer",
         "TileTypeId",
         "Camera",
         "Input",
         "LeftMouseClicked",
-        "ScreenMousePosition",
-        "LayerMask",
-        "TargetsBuffer"
+        "ScreenMousePosition"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -131,15 +140,21 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Level.LevelAvailable),
         typeof(Code.Gameplay.Features.Level.LevelIdComponent),
         typeof(Code.Gameplay.Features.Level.TilePairsOnLevel),
+        typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.Full),
+        typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.LayerMask),
+        typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.ProcessedTarget),
+        typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.TargetsBuffer),
+        typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.TargetsLimit),
         typeof(Code.Gameplay.Features.Tile.Acorn),
         typeof(Code.Gameplay.Features.Tile.Amanita),
+        typeof(Code.Gameplay.Features.Tile.Selected),
+        typeof(Code.Gameplay.Features.Tile.Tile),
+        typeof(Code.Gameplay.Features.Tile.TileSelectIcon),
         typeof(Code.Gameplay.Features.Tile.TileSpriteRenderer),
         typeof(Code.Gameplay.Features.Tile.TileTypeIdComponent),
         typeof(Code.Gameplay.Input.CameraComponent),
         typeof(Code.Gameplay.Input.Input),
         typeof(Code.Gameplay.Input.LeftMouseClicked),
-        typeof(Code.Gameplay.Input.ScreenMousePosition),
-        typeof(TargetCollectionComponents.LayerMask),
-        typeof(TargetCollectionComponents.TargetsBuffer)
+        typeof(Code.Gameplay.Input.ScreenMousePosition)
     };
 }
