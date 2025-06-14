@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Code.Gameplay.Features.Grid.Factory;
 using Entitas;
 
-namespace Code.Gameplay.Features.Level
+namespace Code.Gameplay.Features.Level.Systems
 {
 	public class CreateGridForLevelSystem : IExecuteSystem
 	{

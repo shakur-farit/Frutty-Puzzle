@@ -4,6 +4,7 @@ using Code.Gameplay.Features.Level;
 using Code.Gameplay.Features.Movement;
 using Code.Gameplay.Features.TargetsCollection;
 using Code.Gameplay.Features.Tile;
+using Code.Gameplay.Features.TileComparer;
 using Code.Gameplay.Features.TileLockController;
 using Code.Gameplay.Input;
 using Code.Infrastructure.Systems;
@@ -22,6 +23,7 @@ namespace Code.Gameplay
 			Add(systems.Create<BindViewFeature>());
 			Add(systems.Create<InputFeature>());
 			Add(systems.Create<TargetsCollectionFeature>());
+			Add(systems.Create<TileComparerFeature>());
 			Add(systems.Create<MovementFeature>());
 
 			Add(systems.Create<ProcessGameDestructedFeature>());

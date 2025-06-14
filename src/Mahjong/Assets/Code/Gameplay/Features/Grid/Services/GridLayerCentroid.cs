@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Code.Gameplay.Features.Grid.Systems
+namespace Code.Gameplay.Features.Grid.Services
 {
 	public class GridLayerCentroid : IGridLayerCentroid
 	{

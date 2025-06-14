@@ -23,9 +23,7 @@ namespace Code.Gameplay.Features.TargetsCollection.Systems
 
 			_collectors = game.GetGroup(GameMatcher
 				.AllOf(
-					GameMatcher.TargetsBuffer,
-					GameMatcher.TargetsLimit)
-				.NoneOf(GameMatcher.Full));
+					GameMatcher.TargetsBuffer));
 		}
 
 		public void Execute()
@@ -41,15 +39,10 @@ namespace Code.Gameplay.Features.TargetsCollection.Systems
 					collector.TargetsBuffer.Add(target.Id);
 					target.isCollectedTarget = true;
 				}
-
-				if(collector.TargetsBuffer.Count >= collector.TargetsLimit)
-					collector.isFull = true;
 			}
 		}
 
-		private static bool IsNotProcessed(GameEntity collector, GameEntity target)
-		{
-			return collector.TargetsBuffer.Contains(target.Id) == false && target.isProcessedTarget == false;
-		}
+		private bool IsNotProcessed(GameEntity collector, GameEntity target) => 
+			collector.TargetsBuffer.Contains(target.Id) == false && target.isProcessedTarget == false;
 	}
 }

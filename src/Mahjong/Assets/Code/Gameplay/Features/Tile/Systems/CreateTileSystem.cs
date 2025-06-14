@@ -3,7 +3,7 @@ using Code.Gameplay.Features.Tile.Factory;
 using Entitas;
 using UnityEngine;
 
-namespace Code.Gameplay.Features.Tile
+namespace Code.Gameplay.Features.Tile.Systems
 {
 	public class CreateTileSystem : IExecuteSystem
 	{

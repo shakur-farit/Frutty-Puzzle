@@ -10,6 +10,8 @@ namespace Code.Gameplay.Features.TileLockController
 			Add(systems.Create<TileLockControllerInitialize>());
 
 			Add(systems.Create<MarkTileUnlockedOrLockedSystem>());
+
+			Add(systems.Create<CleanupTileLockControllerSystem>());
 		}
 	}
 }

@@ -3,7 +3,7 @@ using Code.Common.Entity;
 using Code.Common.Extensions;
 using Entitas;
 
-namespace Code.Gameplay
+namespace Code.Gameplay.Features.TileLockController.Systems
 {
 	public class TilesCollectorInitializeSystem : IInitializeSystem
 	{
@@ -12,7 +12,6 @@ namespace Code.Gameplay
 			CreateEntity.Empty()
 				.AddTargetsBuffer(new List<int>())
 				.AddLayerMask(CollisionLayer.Tile.AsMask())
-				.AddTargetsLimit(2)
 				;
 		}
 	}

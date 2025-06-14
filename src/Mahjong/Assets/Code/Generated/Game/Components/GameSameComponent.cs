@@ -8,17 +8,17 @@
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherFull;
+    static Entitas.IMatcher<GameEntity> _matcherSame;
 
-    public static Entitas.IMatcher<GameEntity> Full {
+    public static Entitas.IMatcher<GameEntity> Same {
         get {
-            if (_matcherFull == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Full);
+            if (_matcherSame == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Same);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherFull = matcher;
+                _matcherSame = matcher;
             }
 
-            return _matcherFull;
+            return _matcherSame;
         }
     }
 }
@@ -33,18 +33,18 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.Full fullComponent = new Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.Full();
+    static readonly Code.Gameplay.Features.TileComparer.Same sameComponent = new Code.Gameplay.Features.TileComparer.Same();
 
-    public bool isFull {
-        get { return HasComponent(GameComponentsLookup.Full); }
+    public bool isSame {
+        get { return HasComponent(GameComponentsLookup.Same); }
         set {
-            if (value != isFull) {
-                var index = GameComponentsLookup.Full;
+            if (value != isSame) {
+                var index = GameComponentsLookup.Same;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : fullComponent;
+                            : sameComponent;
 
                     AddComponent(index, component);
                 } else {

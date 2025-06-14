@@ -27,7 +27,7 @@ namespace Code.Gameplay.Features.TileLockController.Systems
 			{
 				GameEntity tile = _game.GetEntityWithId(tileId);
 				tile.isUnlocked = true;
-				Debug.Log($"Tile with {tileId} id on {controller.PositionByTile[tileId]} position is unlocked = {tile.isUnlocked}");
+				//Debug.Log($"Tile with {tileId} id on {controller.PositionByTile[tileId]} position is unlocked = {tile.isUnlocked}");
 			}
 		}
 	}
