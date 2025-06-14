@@ -3,19 +3,20 @@ using Entitas;
 
 namespace Code.Gameplay
 {
-	public class SelectProcessedTilesSystem : IExecuteSystem
+	public class SelectUnlockedTilesOnCLickSystem : IExecuteSystem
 	{
 		private readonly List<GameEntity> _buffer = new(32);
 
 		private readonly IGroup<GameEntity> _tiles;
 
-		public SelectProcessedTilesSystem(GameContext game)
+		public SelectUnlockedTilesOnCLickSystem(GameContext game)
 		{
 			_tiles = game.GetGroup(GameMatcher
 				.AllOf(
 					GameMatcher.Tile,
 					GameMatcher.TileSelectIcon,
-					GameMatcher.ProcessedTarget)
+					GameMatcher.CollectedTarget,
+					GameMatcher.Unlocked)
 				.NoneOf(GameMatcher.Selected));
 		}
 

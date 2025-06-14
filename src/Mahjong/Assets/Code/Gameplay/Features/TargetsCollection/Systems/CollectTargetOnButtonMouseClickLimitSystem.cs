@@ -39,7 +39,7 @@ namespace Code.Gameplay.Features.TargetsCollection.Systems
 				if (IsNotProcessed(collector, target))
 				{
 					collector.TargetsBuffer.Add(target.Id);
-					target.isProcessedTarget = true;
+					target.isCollectedTarget = true;
 				}
 
 				if(collector.TargetsBuffer.Count >= collector.TargetsLimit)
