@@ -34,15 +34,20 @@ namespace Code.Gameplay.Features.TargetsCollection.Systems
 				Ray ray = input.Camera.ScreenPointToRay(input.ScreenMousePosition);
 				GameEntity target = _physicsService.Raycast(ray.origin, ray.direction, collector.LayerMask);
 
-				if (IsNotProcessed(collector, target))
+				if (target != null && IsNotCollected(target))
 				{
+					Debug.Log(IsNotCollected(target));
+
 					collector.TargetsBuffer.Add(target.Id);
 					target.isCollectedTarget = true;
+
+					Debug.Log($"{target.Id} is collected");
+					Debug.Log($"{target.Id} / {target.isCollectedTarget = true}");
 				}
 			}
 		}
 
-		private bool IsNotProcessed(GameEntity collector, GameEntity target) => 
-			collector.TargetsBuffer.Contains(target.Id) == false && target.isProcessedTarget == false;
+		private bool IsNotCollected(GameEntity target) => 
+			target.isCollectedTarget == false;
 	}
 }

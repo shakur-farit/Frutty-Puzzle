@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Code.Gameplay.Features.Tile;
 using Entitas;
-using UnityEngine;
 
 namespace Code.Gameplay.Features.TileComparer
 {
@@ -31,8 +30,8 @@ namespace Code.Gameplay.Features.TileComparer
 				foreach (int id in comparer.TileCompareList)
 				{
 					GameEntity tile = _game.GetEntityWithId(id);
-					if (tile != null)
-						compareTypeList.Add(tile.TileTypeId);
+
+					compareTypeList.Add(tile.TileTypeId);
 				}
 
 				if (IsSame(compareTypeList))
@@ -40,11 +39,8 @@ namespace Code.Gameplay.Features.TileComparer
 					foreach (int id in comparer.TileCompareList)
 					{
 						GameEntity tile = _game.GetEntityWithId(id);
-					if (tile != null)
 
-							tile.isSame = true;
-
-						Debug.Log("IsSame");
+						tile.isSame = true;
 					}
 				}
 
@@ -53,7 +49,7 @@ namespace Code.Gameplay.Features.TileComparer
 			}
 		}
 
-		private bool IsSame(List<TileTypeId> list) => 
+		private bool IsSame(List<TileTypeId> list) =>
 			list.All(id => id == list[0]);
 	}
 }

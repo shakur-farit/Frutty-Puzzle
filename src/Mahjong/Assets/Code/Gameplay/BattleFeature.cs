@@ -16,12 +16,12 @@ namespace Code.Gameplay
 	{
 		public BattleFeature(ISystemsFactory systems)
 		{
+			Add(systems.Create<InputFeature>());
 			Add(systems.Create<LevelFeature>());
 			Add(systems.Create<GridFeature>());
-			Add(systems.Create<TileLockControllerFeature>());
 			Add(systems.Create<TileFeature>());
 			Add(systems.Create<BindViewFeature>());
-			Add(systems.Create<InputFeature>());
+			Add(systems.Create<TileLockControllerFeature>());
 			Add(systems.Create<TargetsCollectionFeature>());
 			Add(systems.Create<TileComparerFeature>());
 			Add(systems.Create<MovementFeature>());

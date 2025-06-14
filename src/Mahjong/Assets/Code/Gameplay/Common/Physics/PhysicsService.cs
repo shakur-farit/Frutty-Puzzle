@@ -36,11 +36,12 @@ namespace Code.Gameplay.Common.Time
 
 		public GameEntity Raycast(Vector3 worldPosition, Vector3 direction, int layerMask)
 		{
-			int hitCount = Physics.RaycastNonAlloc(worldPosition, direction, Hits, layerMask);
+			int hitCount = Physics.RaycastNonAlloc(worldPosition, direction, Hits, Mathf.Infinity, layerMask);
 
 			for (int i = 0; i < hitCount; i++)
 			{
 				RaycastHit hit = Hits[i];
+
 				if (hit.collider == null)
 					continue;
 

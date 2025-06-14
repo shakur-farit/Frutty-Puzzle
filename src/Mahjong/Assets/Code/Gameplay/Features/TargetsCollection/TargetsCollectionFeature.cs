@@ -8,6 +8,8 @@ namespace Code.Gameplay.Features.TargetsCollection
 		public TargetsCollectionFeature(ISystemsFactory systems)
 		{
 			Add(systems.Create<CollectTargetOnButtonMouseClickLimitSystem>());
+
+			Add(systems.Create<CleanupTargetBufferOnTargetProcessedSystem>());
 		}
 	}
 }
