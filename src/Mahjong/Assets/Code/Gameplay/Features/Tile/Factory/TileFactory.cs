@@ -21,27 +21,6 @@ namespace Code.Gameplay.Features.Tile.Factory
 
 		public GameEntity CreateTile(TileTypeId typeId, Vector3 at)
 		{
-			switch (typeId)
-			{
-				case TileTypeId.Acorn:
-					return CreateAcorn(typeId, at);
-				case TileTypeId.Amanita:
-					return CreateAmanita(typeId, at);
-			}
-
-			throw new Exception($"Tile with type id {typeId} does not exist");
-		}
-
-		private GameEntity CreateAcorn(TileTypeId typeId, Vector3 at) =>
-			CreateTileEntity(typeId, at)
-				.With(x => x.isAcorn = true);
-
-		private GameEntity CreateAmanita(TileTypeId typeId, Vector3 at) =>
-			CreateTileEntity(typeId, at)
-				.With(x => x.isAmanita = true);
-
-		private GameEntity CreateTileEntity(TileTypeId typeId, Vector3 at)
-		{
 			TileConfig config = _staticDataService.GetTileConfig(typeId);
 
 			return CreateEntity.Empty()

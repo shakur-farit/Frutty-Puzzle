@@ -12,11 +12,6 @@ namespace Code.Gameplay.Features.Tile
 		Cheese = 7,
 		Corn = 8,
 		Ham = 9,
-		Ice = 10,
-		Jelly = 11,
-		Milk = 12,
-		Nut = 13,
-		Pie = 14,
-		Potato = 15
+		Ice = 10
 	}
 }

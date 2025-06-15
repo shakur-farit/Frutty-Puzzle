@@ -43,26 +43,24 @@ public static class GameComponentsLookup {
     public const int LayerMask = 32;
     public const int ProcessedTarget = 33;
     public const int TargetsBuffer = 34;
-    public const int Acorn = 35;
-    public const int Amanita = 36;
-    public const int Selected = 37;
-    public const int Tile = 38;
-    public const int TileSelectIcon = 39;
-    public const int TileSpriteRenderer = 40;
-    public const int TileTypeId = 41;
-    public const int CompareListFull = 42;
-    public const int CompareListLimit = 43;
-    public const int Same = 44;
-    public const int TileCompareList = 45;
-    public const int Locked = 46;
-    public const int PositionByTile = 47;
-    public const int Unlocked = 48;
-    public const int Camera = 49;
-    public const int Input = 50;
-    public const int LeftMouseClicked = 51;
-    public const int ScreenMousePosition = 52;
+    public const int Selected = 35;
+    public const int Tile = 36;
+    public const int TileSelectIcon = 37;
+    public const int TileSpriteRenderer = 38;
+    public const int TileTypeId = 39;
+    public const int CompareListFull = 40;
+    public const int CompareListLimit = 41;
+    public const int Same = 42;
+    public const int TileCompareList = 43;
+    public const int Locked = 44;
+    public const int PositionByTile = 45;
+    public const int Unlocked = 46;
+    public const int Camera = 47;
+    public const int Input = 48;
+    public const int LeftMouseClicked = 49;
+    public const int ScreenMousePosition = 50;
 
-    public const int TotalComponents = 53;
+    public const int TotalComponents = 51;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -100,8 +98,6 @@ public static class GameComponentsLookup {
         "LayerMask",
         "ProcessedTarget",
         "TargetsBuffer",
-        "Acorn",
-        "Amanita",
         "Selected",
         "Tile",
         "TileSelectIcon",
@@ -156,8 +152,6 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.LayerMask),
         typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.ProcessedTarget),
         typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.TargetsBuffer),
-        typeof(Code.Gameplay.Features.Tile.Acorn),
-        typeof(Code.Gameplay.Features.Tile.Amanita),
         typeof(Code.Gameplay.Features.Tile.Selected),
         typeof(Code.Gameplay.Features.Tile.Tile),
         typeof(Code.Gameplay.Features.Tile.TileSelectIcon),

@@ -29,11 +29,35 @@ MonoBehaviour:
     m_SerializedLabels:
     - TileConfig
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 149c2c9c18c4ccc41b0523c8d3603873
+    m_Address: Assets/StaticData/Tiles/HamTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1bdcb63ae99b4cd4a9cf24fd106203a4
+    m_Address: Assets/StaticData/Tiles/IceTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3bdf7e14aba266b458a130f41589857a
     m_Address: Assets/StaticData/Level/FirstLevelConfig.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - LevelConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4590374b45bfe864ea5137f66d70e119
+    m_Address: Assets/StaticData/Tiles/ApplTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52c22a7808d97fe48b345ba20bce4af4
+    m_Address: Assets/StaticData/Tiles/CornTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 54135fc0460a9f14096fcf5743b0358e
     m_Address: Assets/StaticData/Grid/FullSuareGridConfig.asset
@@ -53,11 +77,29 @@ MonoBehaviour:
     m_SerializedLabels:
     - WindowConfig
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8068128b9ffcf274aaed0ab1cbaa0106
+    m_Address: Assets/StaticData/Tiles/CarrotTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 934a6ef8573faa040806fc9fd7672df2
+    m_Address: Assets/StaticData/Tiles/BeetTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9864b2f127949ff43ba3e09067f8105c
     m_Address: Assets/StaticData/Grid/XSuareGridConfig.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - GridConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9bf8d16a4c496794cb49d2228689a418
+    m_Address: Assets/StaticData/Tiles/CheeseTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ae3d601dd95c2cc4ab5b553ff417e6e7
     m_Address: Assets/StaticData/Level/SecondLevelConfig.asset
@@ -70,6 +112,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - GridConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2988357c91e4e740bfa57c5aae5fb64
+    m_Address: Assets/StaticData/Tiles/ButterTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f7c649ad75609d04bab3e959ebc5a33b, type: 2}
