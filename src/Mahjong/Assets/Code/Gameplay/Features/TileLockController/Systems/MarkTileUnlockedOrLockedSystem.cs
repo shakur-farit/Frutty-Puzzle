@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Entitas;
 using UnityEngine;
 
@@ -9,7 +8,7 @@ namespace Code.Gameplay.Features.TileLockController.Systems
 	{
 		private readonly GameContext _game;
 		private readonly IGroup<GameEntity> _lockControllers;
-		private readonly IGroup<GameEntity> _grids;
+		private readonly IGroup<GameEntity> _grid;
 
 		public MarkTileUnlockedOrLockedSystem(GameContext game)
 		{
@@ -18,54 +17,58 @@ namespace Code.Gameplay.Features.TileLockController.Systems
 				.AllOf(
 					GameMatcher.PositionByTile));
 
-			_grids = game.GetGroup(GameMatcher
+			_grid = game.GetGroup(GameMatcher
 				.AllOf(
 					GameMatcher.Grid,
-					GameMatcher.GridColumns,
-					GameMatcher.GridRows,
-					GameMatcher.GridLayers,
 					GameMatcher.CellSizeX,
-					GameMatcher.CellSizeY,
-					GameMatcher.CellSizeZ));
+					GameMatcher.CellSizeZ,
+					GameMatcher.CellSizeY));
 		}
 
 		public void Execute()
 		{
-			foreach (GameEntity controller in _lockControllers)
-			foreach (int tileId in controller.PositionByTile.Keys)
+			foreach(GameEntity controller in _lockControllers)
+			foreach(GameEntity grid in _grid)
+			foreach(int tileId in controller.PositionByTile.Keys)
 			{
-				var position = controller.PositionByTile[tileId];
-				var tile = _game.GetEntityWithId(tileId);
-				if (IsLocked(position, controller.PositionByTile))
-				{
-					tile.isLocked = true;
-					Debug.Log($"{tileId} is Locked");
-				}
-				else
-				{
-					tile.isUnlocked = true;
-					Debug.Log($"{tileId} is Unlocked");
-				}
-				}
+				Vector3 position = controller.PositionByTile[tileId];
+				GameEntity tile = _game.GetEntityWithId(tileId);
+
+				bool isLocked = IsLocked(position, controller.PositionByTile, grid.CellSizeX, grid.CellSizeY, grid.CellSizeZ);
+
+				tile.isLocked = isLocked;
+				tile.isUnlocked = !isLocked;
+			}
 		}
 
-		public  bool IsLocked(Vector3 tilePosition, Dictionary<int, Vector3> allTiles, float tolerance = 0.01f)
+		public bool IsLocked(Vector3 tilePosition, Dictionary<int, Vector3> allTiles, float sizeX,
+			float sizeY, float sizeZ, float tolerance = 0.01f, float offsetTolerance = 0.71f)
 		{
 			bool hasLeft = false;
 			bool hasRight = false;
+			bool hasTop = false;
 
-			foreach (var otherPos in allTiles.Values)
+			foreach (Vector3 otherTilesPosition in allTiles.Values)
 			{
-				if (Mathf.Abs(otherPos.y - tilePosition.y) > tolerance || Mathf.Abs(otherPos.z - tilePosition.z) > tolerance)
-					continue;
+				if (Mathf.Abs(otherTilesPosition.y - tilePosition.y) < tolerance)
+				{
+					if (Mathf.Abs(otherTilesPosition.x - (tilePosition.x - sizeX)) < tolerance &&
+					    Mathf.Abs(otherTilesPosition.z - tilePosition.z) < tolerance)
+						hasLeft = true;
 
-				if (Mathf.Abs(otherPos.x - (tilePosition.x - 1f)) < tolerance)
-					hasLeft = true;
+					if (Mathf.Abs(otherTilesPosition.x - (tilePosition.x + sizeX)) < tolerance &&
+					    Mathf.Abs(otherTilesPosition.z - tilePosition.z) < tolerance)
+						hasRight = true;
+				}
 
-				if (Mathf.Abs(otherPos.x - (tilePosition.x + 1f)) < tolerance)
-					hasRight = true;
+				bool closeToTopY = Mathf.Abs(otherTilesPosition.y - (tilePosition.y + sizeY)) < tolerance;
+				bool closeToTopX = Mathf.Abs(otherTilesPosition.x - tilePosition.x) <= sizeX * offsetTolerance;
+				bool closeToTopZ = Mathf.Abs(otherTilesPosition.z - tilePosition.z) <= sizeZ * offsetTolerance;
 
-				if (hasLeft && hasRight)
+				if (closeToTopY && closeToTopX && closeToTopZ)
+					hasTop = true;
+
+				if ((hasLeft && hasRight) || hasTop)
 					return true;
 			}
 

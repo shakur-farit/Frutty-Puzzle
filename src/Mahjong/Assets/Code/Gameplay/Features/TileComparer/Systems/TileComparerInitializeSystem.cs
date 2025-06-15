@@ -1,4 +1,3 @@
-using System.Collections;
 using Code.Common.Entity;
 using Entitas;
 

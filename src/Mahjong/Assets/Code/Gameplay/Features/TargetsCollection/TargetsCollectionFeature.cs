@@ -1,4 +1,5 @@
 using Code.Gameplay.Features.TargetsCollection.Systems;
+using Code.Gameplay.Features.TileLockController.Systems;
 using Code.Infrastructure.Systems;
 
 namespace Code.Gameplay.Features.TargetsCollection
@@ -7,6 +8,8 @@ namespace Code.Gameplay.Features.TargetsCollection
 	{
 		public TargetsCollectionFeature(ISystemsFactory systems)
 		{
+			Add(systems.Create<TilesCollectorInitializeSystem>());
+
 			Add(systems.Create<CollectTargetOnButtonMouseClickLimitSystem>());
 
 			Add(systems.Create<CleanupTargetBufferOnTargetProcessedSystem>());

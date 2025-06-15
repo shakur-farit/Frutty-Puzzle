@@ -1,0 +1,37 @@
+using System.Collections.Generic;
+using Entitas;
+using UnityEngine;
+
+namespace Code.Gameplay.Features.TargetsCollection.Systems
+{
+	public class ProcessedLockedTilesSystem : IExecuteSystem
+	{
+		private readonly IGroup<GameEntity> _tiles;
+		private readonly IGroup<GameEntity> _collectors;
+		private readonly List<GameEntity> _buffer = new(1);
+
+		public ProcessedLockedTilesSystem(GameContext game)
+		{
+			_tiles = game.GetGroup(GameMatcher
+				.AllOf(
+					GameMatcher.Locked,
+					GameMatcher.CollectedTarget));
+
+			_collectors = game.GetGroup(GameMatcher
+				.AllOf(
+					GameMatcher.TargetsBuffer));
+		}
+
+		public void Execute()
+		{
+			foreach (GameEntity collector in _collectors)
+			foreach (GameEntity tile in _tiles.GetEntities(_buffer))
+			{
+				collector.TargetsBuffer.Remove(tile.Id);
+				tile.isCollectedTarget = false;
+
+				Debug.Log($"{tile.Id} is locked and removed from buffer");
+			}
+		}
+	}
+}

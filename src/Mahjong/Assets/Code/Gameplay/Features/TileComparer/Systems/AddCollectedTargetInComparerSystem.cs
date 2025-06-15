@@ -28,10 +28,7 @@ namespace Code.Gameplay.Features.TargetsCollection.Systems
 		{
 			foreach (GameEntity comparer in _comparers)
 			foreach (GameEntity target in _targets.GetEntities(_buffer))
-			{
 				comparer.TileCompareList.Add(target.Id);
-				Debug.Log($"{target.Id} is added to comparer");
-			}
 		}
 	}
 }

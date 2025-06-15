@@ -1,4 +1,7 @@
+using Code.Gameplay.Features.Tile.Systems;
 using Entitas;
+using UnityEngine;
+using UnityEngine.Rendering.VirtualTexturing;
 
 namespace Code.Gameplay.Features.TileComparer
 {
@@ -17,10 +20,8 @@ namespace Code.Gameplay.Features.TileComparer
 		public void Execute()
 		{
 			foreach (GameEntity comparer in _comparers)
-			{
-				if(comparer.TileCompareList.Count >= comparer.CompareListLimit)
+				if (comparer.TileCompareList.Count >= comparer.CompareListLimit)
 					comparer.isCompareListFull = true;
-			}
 		}
 	}
 }
