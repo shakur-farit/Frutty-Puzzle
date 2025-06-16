@@ -11,11 +11,12 @@ namespace Code.Gameplay.Features.TileComparer
 		{
 			Add(systems.Create<TileComparerInitializeSystem>());
 
-			Add(systems.Create<ProcessedLockedTilesSystem>());
+			Add(systems.Create<ProcessLockedTilesSystem>());
 			Add(systems.Create<AddCollectedTargetInComparerSystem>());
 			Add(systems.Create<SelectUnlockedTilesOnCLickSystem>());
 			Add(systems.Create<MarkCompareListFullSystem>());
 			Add(systems.Create<TileCompareSystem>());
+			Add(systems.Create<UnselectNotSameTiles>());
 			Add(systems.Create<MarkDestructSameTargetsSystem>());
 		}
 	}

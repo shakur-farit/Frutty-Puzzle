@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c2f2a7402b03aa469eb78c0731a4cbf, type: 3}
-  m_Name: FullTriangleGridConfig
+  m_Name: RhombusGridConfig
   m_EditorClassIdentifier: 
-  Id: 5
-  GridColumns: 5
-  GridRows: 5
-  GridLayers: 3
+  Id: 2
+  GridColumns: 6
+  GridRows: 6
+  GridLayers: 2
   CellSize:
-    CellSizeX: 1
+    CellSizeX: 2
     CellSizeY: 1
-    CellSizeZ: 1
+    CellSizeZ: 2

@@ -22,11 +22,11 @@ namespace Code.Gameplay.Features.Grid.Factory
 		{
 			switch (id)
 			{
-				case GridTypeId.FullSquare:
+				case GridTypeId.Square:
 					return CreateFullSquareGrid(id);
-				case GridTypeId.FullRhombus:
+				case GridTypeId.Rhombus:
 					return CreateFullRhombusGrid(id);
-				case GridTypeId.FullTriangle:
+				case GridTypeId.Triangle:
 					return CreateFullTriangleGrid(id);
 			}
 

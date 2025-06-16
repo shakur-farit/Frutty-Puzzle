@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 1
   GridType: 1
-  TilePairs: 10
+  TilePairs: 20

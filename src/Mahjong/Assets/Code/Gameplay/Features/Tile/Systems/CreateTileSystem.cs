@@ -12,6 +12,7 @@ namespace Code.Gameplay.Features.Tile.Systems
 		private readonly IGroup<GameEntity> _generators;
 		private readonly IGroup<GameEntity> _controllers;
 		private readonly List<GameEntity> _buffer = new(1);
+		private readonly IGroup<GameEntity> _grids;
 
 		public CreateTileSystem(GameContext game, ITileFactory tileFactory)
 		{
@@ -22,6 +23,12 @@ namespace Code.Gameplay.Features.Tile.Systems
 					GameMatcher.LevelSolvable)
 				.NoneOf(GameMatcher.TilesCreated));
 
+			_grids = game.GetGroup(GameMatcher
+				.AllOf(
+					GameMatcher.CellSizeX,
+					GameMatcher.CellSizeY,
+					GameMatcher.CellSizeZ));
+
 			_controllers = game.GetGroup(GameMatcher
 				.AllOf(
 					GameMatcher.PositionByTile));
@@ -31,13 +38,16 @@ namespace Code.Gameplay.Features.Tile.Systems
 		{
 			foreach (GameEntity generator in _generators.GetEntities(_buffer))
 			foreach (GameEntity controller in _controllers)
+			foreach (GameEntity grid in _grids)
 			{
 				List<TilePosition> list = generator.TilePositions;
-					Debug.Log("CreateTiles");
 
 				foreach (TilePosition tilePositions in list)
 				{
-					GameEntity tile = CreateTile(tilePositions.Id, tilePositions.Position);
+					GameEntity tile = 
+						CreateTile(tilePositions.Id, tilePositions.Position,
+							grid.CellSizeX, grid.CellSizeY, grid.CellSizeZ);
+
 					SaveTilePosition(controller.PositionByTile, tile.Id, tilePositions.Position);
 				}
 
@@ -45,8 +55,9 @@ namespace Code.Gameplay.Features.Tile.Systems
 			}
 		}
 
-		private GameEntity CreateTile(TileTypeId id, Vector3 position) =>
-			_tileFactory.CreateTile(id, position);
+		private GameEntity CreateTile(TileTypeId id, Vector3 position,
+			float tileSizeX, float tileSizeY, float tileSizeZ) =>
+			_tileFactory.CreateTile(id, position, tileSizeX, tileSizeY, tileSizeZ);
 
 		private void SaveTilePosition(Dictionary<int, Vector3> positionsByTile, int tileId, Vector3 position) =>
 			positionsByTile.Add(tileId, position);

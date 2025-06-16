@@ -35,15 +35,9 @@ namespace Code.Gameplay.Features.RandomGenerator.Systems
 					grid.CellSizeX, grid.CellSizeY, grid.CellSizeZ);
 
 				if (isSolvable)
-				{
 					generators.isLevelSolvable = true;
-					Debug.Log("isSolvable");
-				}
 				else
-				{
 					generators.isGenerationRequired = true;
-					Debug.Log("isNotSolvable");
-				}
 			}
 		}
 	}

@@ -50,21 +50,25 @@ public static class GameComponentsLookup {
     public const int Tile = 39;
     public const int TilesCreated = 40;
     public const int TileSelectIcon = 41;
-    public const int TileSpriteRenderer = 42;
-    public const int TileTypeId = 43;
-    public const int CompareListFull = 44;
-    public const int CompareListLimit = 45;
-    public const int Same = 46;
-    public const int TileCompareList = 47;
-    public const int Locked = 48;
-    public const int PositionByTile = 49;
-    public const int Unlocked = 50;
-    public const int Camera = 51;
-    public const int Input = 52;
-    public const int LeftMouseClicked = 53;
-    public const int ScreenMousePosition = 54;
+    public const int TileSizeX = 42;
+    public const int TileSizeY = 43;
+    public const int TileSizeZ = 44;
+    public const int TileSpriteRenderer = 45;
+    public const int TileTypeId = 46;
+    public const int CompareListFull = 47;
+    public const int CompareListLimit = 48;
+    public const int NotSame = 49;
+    public const int Same = 50;
+    public const int TileCompareList = 51;
+    public const int Locked = 52;
+    public const int PositionByTile = 53;
+    public const int Unlocked = 54;
+    public const int Camera = 55;
+    public const int Input = 56;
+    public const int LeftMouseClicked = 57;
+    public const int ScreenMousePosition = 58;
 
-    public const int TotalComponents = 55;
+    public const int TotalComponents = 59;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -109,10 +113,14 @@ public static class GameComponentsLookup {
         "Tile",
         "TilesCreated",
         "TileSelectIcon",
+        "TileSizeX",
+        "TileSizeY",
+        "TileSizeZ",
         "TileSpriteRenderer",
         "TileTypeId",
         "CompareListFull",
         "CompareListLimit",
+        "NotSame",
         "Same",
         "TileCompareList",
         "Locked",
@@ -167,10 +175,14 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Tile.Tile),
         typeof(Code.Gameplay.Features.Tile.TilesCreated),
         typeof(Code.Gameplay.Features.Tile.TileSelectIcon),
+        typeof(Code.Gameplay.Features.Tile.TileSizeX),
+        typeof(Code.Gameplay.Features.Tile.TileSizeY),
+        typeof(Code.Gameplay.Features.Tile.TileSizeZ),
         typeof(Code.Gameplay.Features.Tile.TileSpriteRenderer),
         typeof(Code.Gameplay.Features.Tile.TileTypeIdComponent),
         typeof(Code.Gameplay.Features.TileComparer.CompareListFull),
         typeof(Code.Gameplay.Features.TileComparer.CompareListLimit),
+        typeof(Code.Gameplay.Features.TileComparer.NotSame),
         typeof(Code.Gameplay.Features.TileComparer.Same),
         typeof(Code.Gameplay.Features.TileComparer.TileCompareList),
         typeof(Code.Gameplay.Features.TileLockController.Locked),

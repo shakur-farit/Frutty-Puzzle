@@ -18,7 +18,7 @@ namespace Code.Infrastructure.States.GameStates
 
 		public override void Enter()
 		{
-			_levelFactory.CreateLevel(LevelId.Second);
+			_levelFactory.CreateLevel(LevelId.First);
 
 			EnterToBattleLoop();
 		}

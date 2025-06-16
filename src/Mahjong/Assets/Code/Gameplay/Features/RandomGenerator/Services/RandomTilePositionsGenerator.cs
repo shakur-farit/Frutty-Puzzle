@@ -24,6 +24,9 @@ namespace Code.Gameplay.Features.RandomGenerator
 			if (totalTiles == 0 || allGridSlots.Count == 0)
 				return new List<TilePosition>();
 
+			if (allGridSlots.Count % 2 != 0)
+				allGridSlots.Remove(allGridSlots[^1]);
+
 			int usableTileCount = Mathf.Min(totalTiles, allGridSlots.Count);
 			List<Vector3> selectedPositions = allGridSlots.Take(usableTileCount).ToList();
 
@@ -63,21 +66,6 @@ namespace Code.Gameplay.Features.RandomGenerator
 				int j = _random.Range(0, i + 1);
 				(list[i], list[j]) = (list[j], list[i]);
 			}
-		}
-	}
-
-	public struct TilePosition
-	{
-		public TileTypeId Id;
-		public Vector3 Position;
-
-		public static TilePosition Set(TileTypeId id, Vector3 position)
-		{
-			return new TilePosition()
-			{
-				Id = id,
-				Position = position
-			};
 		}
 	}
 }

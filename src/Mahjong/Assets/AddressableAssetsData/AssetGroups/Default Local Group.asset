@@ -89,12 +89,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - TileConfig
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9864b2f127949ff43ba3e09067f8105c
-    m_Address: Assets/StaticData/Grid/XSuareGridConfig.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - GridConfig
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9bf8d16a4c496794cb49d2228689a418
     m_Address: Assets/StaticData/Tiles/CheeseTileConfig.asset
     m_ReadOnly: 0

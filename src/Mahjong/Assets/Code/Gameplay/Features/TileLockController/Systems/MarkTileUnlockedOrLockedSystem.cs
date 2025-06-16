@@ -45,8 +45,6 @@ namespace Code.Gameplay.Features.TileLockController.Systems
 
 				tile.isLocked = isLocked;
 				tile.isUnlocked = !isLocked;
-
-				Debug.Log($"{tile.Id} unlocking is: {isLocked}");
 			}
 		}
 	}
