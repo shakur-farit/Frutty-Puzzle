@@ -3,7 +3,7 @@ using Code.Common.Entity;
 using Code.Common.Extensions;
 using Entitas;
 
-namespace Code.Gameplay.Features.TileLockController.Systems
+namespace Code.Gameplay.Features.TargetsCollection.Systems
 {
 	public class TilesCollectorInitializeSystem : IInitializeSystem
 	{

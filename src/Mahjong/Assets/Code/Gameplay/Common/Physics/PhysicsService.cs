@@ -38,6 +38,9 @@ namespace Code.Gameplay.Common.Time
 		{
 			int hitCount = Physics.RaycastNonAlloc(worldPosition, direction, Hits, Mathf.Infinity, layerMask);
 
+			GameEntity closestEntity = null;
+			float closestDistance = Mathf.Infinity;
+
 			for (int i = 0; i < hitCount; i++)
 			{
 				RaycastHit hit = Hits[i];
@@ -49,10 +52,14 @@ namespace Code.Gameplay.Common.Time
 				if (entity == null)
 					continue;
 
-				return entity;
+				if (hit.distance < closestDistance)
+				{
+					closestDistance = hit.distance;
+					closestEntity = entity;
+				}
 			}
 
-			return null;
+			return closestEntity;
 		}
 
 		public GameEntity LineCast(Vector3 start, Vector3 end, int layerMask)

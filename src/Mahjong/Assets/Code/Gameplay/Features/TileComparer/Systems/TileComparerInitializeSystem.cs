@@ -1,7 +1,7 @@
 using Code.Common.Entity;
 using Entitas;
 
-namespace Code.Gameplay.Features.TileComparer
+namespace Code.Gameplay.Features.TileComparer.Systems
 {
 	public class TileComparerInitializeSystem : IInitializeSystem
 	{

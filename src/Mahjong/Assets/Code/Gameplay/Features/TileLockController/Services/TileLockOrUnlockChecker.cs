@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Code.Gameplay.Features.TileLockController.Systems
+namespace Code.Gameplay.Features.TileLockController.Services
 {
 	public class TileLockOrUnlockChecker : ITileLockOrUnlockChecker
 	{

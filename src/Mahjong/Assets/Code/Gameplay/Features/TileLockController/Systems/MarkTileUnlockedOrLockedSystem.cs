@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Code.Gameplay.Features.TileLockController.Services;
 using Entitas;
 using UnityEngine;
 
@@ -44,6 +45,8 @@ namespace Code.Gameplay.Features.TileLockController.Systems
 
 				tile.isLocked = isLocked;
 				tile.isUnlocked = !isLocked;
+
+				Debug.Log($"{tile.Id} unlocking is: {isLocked}");
 			}
 		}
 	}

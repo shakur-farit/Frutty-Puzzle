@@ -1,20 +1,20 @@
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Code.Gameplay.Features.Tile;
 using Code.Infrastructure.Random;
 using UnityEngine;
 
-namespace Code.Gameplay.Features.TileLockController.Systems
+namespace Code.Gameplay.Features.RandomGenerator
 {
-	public class RandomTileGenerator : IRandomTileGenerator
+	public class RandomTilePositionsGenerator : IRandomTilePositionsGenerator
 	{
 		private readonly IRandomService _random;
 
-		public RandomTileGenerator(IRandomService random) => 
+		public RandomTilePositionsGenerator(IRandomService random) => 
 			_random = random;
 
-		public List<TilePositions> GenerateStructuredTiles(int pairCount, List<Vector3> allGridSlots, float cellSizeY,
+		public List<TilePosition> GenerateRandomTilePositions(int pairCount, List<Vector3> allGridSlots,
 			 float cellSupportTolerance = 0.1f)
 		{
 			TileTypeId[] availableTypes = GetAvailableTypes();
@@ -22,7 +22,7 @@ namespace Code.Gameplay.Features.TileLockController.Systems
 			int totalTiles = pairCount * 2;
 
 			if (totalTiles == 0 || allGridSlots.Count == 0)
-				return new List<TilePositions>();
+				return new List<TilePosition>();
 
 			int usableTileCount = Mathf.Min(totalTiles, allGridSlots.Count);
 			List<Vector3> selectedPositions = allGridSlots.Take(usableTileCount).ToList();
@@ -40,10 +40,10 @@ namespace Code.Gameplay.Features.TileLockController.Systems
 			Shuffle(tilePool);
 			Shuffle(selectedPositions);
 
-			List<TilePositions> result = new List<TilePositions>();
+			List<TilePosition> result = new List<TilePosition>();
 
 			for (int i = 0; i < usableTileCount; i++) 
-				result.Add(TilePositions.Set(tilePool[i], selectedPositions[i]));
+				result.Add(TilePosition.Set(tilePool[i], selectedPositions[i]));
 
 			return result;
 		}
@@ -66,14 +66,14 @@ namespace Code.Gameplay.Features.TileLockController.Systems
 		}
 	}
 
-	public struct TilePositions
+	public struct TilePosition
 	{
 		public TileTypeId Id;
 		public Vector3 Position;
 
-		public static TilePositions Set(TileTypeId id, Vector3 position)
+		public static TilePosition Set(TileTypeId id, Vector3 position)
 		{
-			return new TilePositions()
+			return new TilePosition()
 			{
 				Id = id,
 				Position = position

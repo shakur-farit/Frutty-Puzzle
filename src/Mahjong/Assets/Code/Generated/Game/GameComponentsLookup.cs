@@ -39,28 +39,32 @@ public static class GameComponentsLookup {
     public const int LevelAvailable = 28;
     public const int LevelId = 29;
     public const int TilePairsOnLevel = 30;
-    public const int CollectedTarget = 31;
-    public const int LayerMask = 32;
-    public const int ProcessedTarget = 33;
-    public const int TargetsBuffer = 34;
-    public const int Selected = 35;
-    public const int Tile = 36;
-    public const int TileSelectIcon = 37;
-    public const int TileSpriteRenderer = 38;
-    public const int TileTypeId = 39;
-    public const int CompareListFull = 40;
-    public const int CompareListLimit = 41;
-    public const int Same = 42;
-    public const int TileCompareList = 43;
-    public const int Locked = 44;
-    public const int PositionByTile = 45;
-    public const int Unlocked = 46;
-    public const int Camera = 47;
-    public const int Input = 48;
-    public const int LeftMouseClicked = 49;
-    public const int ScreenMousePosition = 50;
+    public const int GenerationRequired = 31;
+    public const int LevelSolvable = 32;
+    public const int TilePositions = 33;
+    public const int CollectedTarget = 34;
+    public const int LayerMask = 35;
+    public const int ProcessedTarget = 36;
+    public const int TargetsBuffer = 37;
+    public const int Selected = 38;
+    public const int Tile = 39;
+    public const int TilesCreated = 40;
+    public const int TileSelectIcon = 41;
+    public const int TileSpriteRenderer = 42;
+    public const int TileTypeId = 43;
+    public const int CompareListFull = 44;
+    public const int CompareListLimit = 45;
+    public const int Same = 46;
+    public const int TileCompareList = 47;
+    public const int Locked = 48;
+    public const int PositionByTile = 49;
+    public const int Unlocked = 50;
+    public const int Camera = 51;
+    public const int Input = 52;
+    public const int LeftMouseClicked = 53;
+    public const int ScreenMousePosition = 54;
 
-    public const int TotalComponents = 51;
+    public const int TotalComponents = 55;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -94,12 +98,16 @@ public static class GameComponentsLookup {
         "LevelAvailable",
         "LevelId",
         "TilePairsOnLevel",
+        "GenerationRequired",
+        "LevelSolvable",
+        "TilePositions",
         "CollectedTarget",
         "LayerMask",
         "ProcessedTarget",
         "TargetsBuffer",
         "Selected",
         "Tile",
+        "TilesCreated",
         "TileSelectIcon",
         "TileSpriteRenderer",
         "TileTypeId",
@@ -148,12 +156,16 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Level.LevelAvailable),
         typeof(Code.Gameplay.Features.Level.LevelIdComponent),
         typeof(Code.Gameplay.Features.Level.TilePairsOnLevel),
+        typeof(Code.Gameplay.Features.RandomGenerator.GenerationRequired),
+        typeof(Code.Gameplay.Features.RandomGenerator.LevelSolvable),
+        typeof(Code.Gameplay.Features.RandomGenerator.TilePositions),
         typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.CollectedTarget),
         typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.LayerMask),
         typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.ProcessedTarget),
         typeof(Code.Gameplay.Features.TargetsCollection.TargetCollectionComponents.TargetsBuffer),
         typeof(Code.Gameplay.Features.Tile.Selected),
         typeof(Code.Gameplay.Features.Tile.Tile),
+        typeof(Code.Gameplay.Features.Tile.TilesCreated),
         typeof(Code.Gameplay.Features.Tile.TileSelectIcon),
         typeof(Code.Gameplay.Features.Tile.TileSpriteRenderer),
         typeof(Code.Gameplay.Features.Tile.TileTypeIdComponent),

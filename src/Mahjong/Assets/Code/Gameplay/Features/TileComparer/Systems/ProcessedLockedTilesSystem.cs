@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Entitas;
 using UnityEngine;
 
-namespace Code.Gameplay.Features.TargetsCollection.Systems
+namespace Code.Gameplay.Features.TileComparer.Systems
 {
 	public class ProcessedLockedTilesSystem : IExecuteSystem
 	{

@@ -4,7 +4,10 @@ using Code.Gameplay.Features.Grid.Factory;
 using Code.Gameplay.Features.Grid.Services;
 using Code.Gameplay.Features.Grid.Systems;
 using Code.Gameplay.Features.Level.Factory;
+using Code.Gameplay.Features.RandomGenerator;
+using Code.Gameplay.Features.RandomGenerator.Systems;
 using Code.Gameplay.Features.Tile.Factory;
+using Code.Gameplay.Features.TileLockController.Services;
 using Code.Gameplay.Features.TileLockController.Systems;
 using Code.Gameplay.Input.Services;
 using Code.Infrastructure.AsstesManagement;
@@ -95,7 +98,8 @@ namespace Code.Infrastructure.Installers
 			Container.Bind<IGridLayerCentroid>().To<GridLayerCentroid>().AsSingle();
 			Container.Bind<IInputService>().To<StandaloneInputService>().AsSingle();
 			Container.Bind<ITileLockOrUnlockChecker>().To<TileLockOrUnlockChecker>().AsSingle();
-			Container.Bind<IRandomTileGenerator>().To<RandomTileGenerator>().AsSingle();
+			Container.Bind<IRandomTilePositionsGenerator>().To<RandomTilePositionsGenerator>().AsSingle();
+			Container.Bind<ISolvabilityChecker>().To<SolvabilityChecker>().AsSingle();
 		}
 
 		private void BindGameplayFactories()

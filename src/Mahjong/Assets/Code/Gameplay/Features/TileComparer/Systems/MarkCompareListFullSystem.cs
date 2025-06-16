@@ -1,9 +1,6 @@
-using Code.Gameplay.Features.Tile.Systems;
 using Entitas;
-using UnityEngine;
-using UnityEngine.Rendering.VirtualTexturing;
 
-namespace Code.Gameplay.Features.TileComparer
+namespace Code.Gameplay.Features.TileComparer.Systems
 {
 	public class MarkCompareListFullSystem : IExecuteSystem
 	{
