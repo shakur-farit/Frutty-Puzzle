@@ -71,6 +71,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - TileConfig
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 778434b972c325049b2299f8e5fd8e29
+    m_Address: Assets/StaticData/Window/HudWindowConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WindowConfig
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 79056185319a58844a142f1c38b95579
     m_Address: Assets/StaticData/Window/MainMenuWindowConfig.asset
     m_ReadOnly: 0

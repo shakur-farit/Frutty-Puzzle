@@ -1,7 +1,5 @@
 using Code.Infrastructure.View.Behaviours;
-using Code.StaticData;
 using UnityEngine;
-using Zenject;
 
 namespace Code.Gameplay.Features.Tile.Behaviours
 {
@@ -12,13 +10,11 @@ namespace Code.Gameplay.Features.Tile.Behaviours
 
 		private void Start()
 		{
-			Debug.Log(_tileEntity.Entity.hasCellSizeX);
-
-			//_tileTransform.localScale = 
-			//	new Vector3(
-			//		_tileEntity.Entity.CellSizeX, 
-			//		_tileEntity.Entity.CellSizeY, 
-			//		_tileEntity.Entity.CellSizeZ);
+			_tileTransform.localScale =
+				new Vector3(
+					_tileEntity.Entity.TileSizeX,
+					_tileEntity.Entity.TileSizeY,
+					_tileEntity.Entity.TileSizeZ);
 		}
 	}
 }

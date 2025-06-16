@@ -35,7 +35,7 @@ namespace Code.Infrastructure.States.StateInfrastructure
 		protected virtual async UniTask WaitForEndOfFrame()
 		{
 			await UniTask.Yield(PlayerLoopTiming.PostLateUpdate);
-
+			
 			ExitOnEndOfFrame();
 		}
 

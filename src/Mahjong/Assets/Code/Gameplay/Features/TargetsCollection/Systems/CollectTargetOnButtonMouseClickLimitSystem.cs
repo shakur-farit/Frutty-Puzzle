@@ -42,7 +42,7 @@ namespace Code.Gameplay.Features.TargetsCollection.Systems
 			}
 		}
 
-		private bool IsCollected(GameEntity target) => 
+		private bool IsCollected(GameEntity target) =>
 			target.isCollectedTarget;
 	}
 }

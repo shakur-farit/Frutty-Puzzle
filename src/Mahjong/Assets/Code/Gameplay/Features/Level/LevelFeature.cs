@@ -8,6 +8,7 @@ namespace Code.Gameplay.Features.Level
 		public LevelFeature(ISystemsFactory systems)
 		{
 			Add(systems.Create<CreateGridForLevelSystem>());
+			Add(systems.Create<LevelCompleteSystem>());
 		}
 	}
 }

@@ -31,15 +31,11 @@ namespace Code.Gameplay.Features.Grid.Systems
 		{
 			foreach (GameEntity grid in _grids.GetEntities(_buffer))
 			{
-				Debug.Log("Here");
-
 				List<Vector3> positions = GetPositions(
 					grid.GridColumns, grid.GridRows, grid.GridLayers, 
 					grid.CellSizeX, grid.CellSizeY, grid.CellSizeZ);
 
 				grid.ReplaceCellPositions(positions);
-				
-				TryVisualizeGrid(positions);
 
 				grid.isAvailable = true;
 			}
@@ -136,17 +132,6 @@ namespace Code.Gameplay.Features.Grid.Systems
 			int i11 = (row + 1) * baseCols + (col + 1);
 
 			return (currentLayer[i00] + currentLayer[i01] + currentLayer[i10] + currentLayer[i11]) / 4f;
-		}
-
-		private void TryVisualizeGrid(List<Vector3> positions)
-		{
-			GameObject visualizerObj = GameObject.Find("Grid Debug");
-			if (visualizerObj == null)
-				return;
-
-			GridVisualizer visualizer = visualizerObj.GetComponent<GridVisualizer>();
-			if (visualizer != null)
-				visualizer.SetPositions(positions);
 		}
 	}
 }

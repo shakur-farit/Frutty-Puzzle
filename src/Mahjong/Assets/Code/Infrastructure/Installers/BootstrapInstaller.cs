@@ -65,7 +65,6 @@ namespace Code.Infrastructure.Installers
 			Container.BindInterfacesAndSelfTo<LoadStaticDataState>().AsSingle();
 			Container.BindInterfacesAndSelfTo<LoadingHomeScreenState>().AsSingle();
 			Container.BindInterfacesAndSelfTo<HomeScreenEnterState>().AsSingle();
-			Container.BindInterfacesAndSelfTo<HomeScreenState>().AsSingle();
 			Container.BindInterfacesAndSelfTo<LoadingGameplayState>().AsSingle();
 			Container.BindInterfacesAndSelfTo<GameplayEnterState>().AsSingle();
 			Container.BindInterfacesAndSelfTo<GameplayLoopState>().AsSingle();

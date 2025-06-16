@@ -35,40 +35,41 @@ public static class GameComponentsLookup {
     public const int StarMask = 24;
     public const int TriangleLayout = 25;
     public const int XMask = 26;
-    public const int GridTypeOnLevel = 27;
-    public const int LevelAvailable = 28;
-    public const int LevelId = 29;
-    public const int TilePairsOnLevel = 30;
-    public const int GenerationRequired = 31;
-    public const int LevelSolvable = 32;
-    public const int TilePositions = 33;
-    public const int CollectedTarget = 34;
-    public const int LayerMask = 35;
-    public const int ProcessedTarget = 36;
-    public const int TargetsBuffer = 37;
-    public const int Selected = 38;
-    public const int Tile = 39;
-    public const int TilesCreated = 40;
-    public const int TileSelectIcon = 41;
-    public const int TileSizeX = 42;
-    public const int TileSizeY = 43;
-    public const int TileSizeZ = 44;
-    public const int TileSpriteRenderer = 45;
-    public const int TileTypeId = 46;
-    public const int CompareListFull = 47;
-    public const int CompareListLimit = 48;
-    public const int NotSame = 49;
-    public const int Same = 50;
-    public const int TileCompareList = 51;
-    public const int Locked = 52;
-    public const int PositionByTile = 53;
-    public const int Unlocked = 54;
-    public const int Camera = 55;
-    public const int Input = 56;
-    public const int LeftMouseClicked = 57;
-    public const int ScreenMousePosition = 58;
+    public const int CurrentTilesCountOnLevel = 27;
+    public const int GridTypeOnLevel = 28;
+    public const int LevelAvailable = 29;
+    public const int LevelId = 30;
+    public const int TilePairsOnLevel = 31;
+    public const int GenerationRequired = 32;
+    public const int LevelSolvable = 33;
+    public const int TilePositions = 34;
+    public const int CollectedTarget = 35;
+    public const int LayerMask = 36;
+    public const int ProcessedTarget = 37;
+    public const int TargetsBuffer = 38;
+    public const int Selected = 39;
+    public const int Tile = 40;
+    public const int TilesCreated = 41;
+    public const int TileSelectIcon = 42;
+    public const int TileSizeX = 43;
+    public const int TileSizeY = 44;
+    public const int TileSizeZ = 45;
+    public const int TileSpriteRenderer = 46;
+    public const int TileTypeId = 47;
+    public const int CompareListFull = 48;
+    public const int CompareListLimit = 49;
+    public const int NotSame = 50;
+    public const int Same = 51;
+    public const int TileCompareList = 52;
+    public const int Locked = 53;
+    public const int PositionByTile = 54;
+    public const int Unlocked = 55;
+    public const int Camera = 56;
+    public const int Input = 57;
+    public const int LeftMouseClicked = 58;
+    public const int ScreenMousePosition = 59;
 
-    public const int TotalComponents = 59;
+    public const int TotalComponents = 60;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -98,6 +99,7 @@ public static class GameComponentsLookup {
         "StarMask",
         "TriangleLayout",
         "XMask",
+        "CurrentTilesCountOnLevel",
         "GridTypeOnLevel",
         "LevelAvailable",
         "LevelId",
@@ -160,6 +162,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Grid.StarMask),
         typeof(Code.Gameplay.Features.Grid.TriangleLayout),
         typeof(Code.Gameplay.Features.Grid.XMask),
+        typeof(Code.Gameplay.Features.Level.CurrentTilesCountOnLevel),
         typeof(Code.Gameplay.Features.Level.GridTypeOnLevel),
         typeof(Code.Gameplay.Features.Level.LevelAvailable),
         typeof(Code.Gameplay.Features.Level.LevelIdComponent),

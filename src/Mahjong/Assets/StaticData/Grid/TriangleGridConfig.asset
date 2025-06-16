@@ -17,6 +17,6 @@ MonoBehaviour:
   GridRows: 5
   GridLayers: 3
   CellSize:
-    CellSizeX: 1
-    CellSizeY: 1
-    CellSizeZ: 1
+    CellSizeX: 2
+    CellSizeY: 2
+    CellSizeZ: 2

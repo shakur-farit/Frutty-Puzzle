@@ -18,7 +18,8 @@ namespace Code.Gameplay.Features.TileLockController.Systems
 
 			_tiles = game.GetGroup(GameMatcher
 				.AllOf(
-					GameMatcher.Destructed));
+					GameMatcher.Id,
+					GameMatcher.ProcessedTarget));
 		}
 
 		public void Cleanup()

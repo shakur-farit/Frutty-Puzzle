@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: MainMenuWindowConfig
   m_EditorClassIdentifier: 
   Id: 2
-  ViewPrefab: {fileID: 0}
+  ViewPrefab: {fileID: 938516303150628243, guid: 0a3361f25ef32d240a2005c05b92b555,
+    type: 3}

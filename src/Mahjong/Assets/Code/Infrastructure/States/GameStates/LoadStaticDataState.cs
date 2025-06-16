@@ -1,4 +1,3 @@
-using Code.Infrastructure.Loading;
 using Code.Infrastructure.States.StateInfrastructure;
 using Code.Infrastructure.States.StateMachine;
 using Cysharp.Threading.Tasks;
@@ -20,8 +19,7 @@ namespace Code.Infrastructure.States.GameStates
 		public override async void Enter()
 		{
 			await LoadStaticData();
-			//EnterToLoadingHomeScreenState();
-			EnterToLoadingGameplayState();
+			EnterToLoadingHomeScreenState();
 		}
 
 		private async UniTask LoadStaticData() =>
@@ -29,8 +27,5 @@ namespace Code.Infrastructure.States.GameStates
 
 		private void EnterToLoadingHomeScreenState() =>
 			_stateMachine.Enter<LoadingHomeScreenState>();
-
-		private void EnterToLoadingGameplayState() =>
-			_stateMachine.Enter<LoadingGameplayState, string>(Scenes.Gameplay);
 	}
 }

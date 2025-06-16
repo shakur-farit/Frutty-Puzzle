@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: RhombusGridConfig
   m_EditorClassIdentifier: 
   Id: 2
-  GridColumns: 6
-  GridRows: 6
+  GridColumns: 5
+  GridRows: 5
   GridLayers: 2
   CellSize:
     CellSizeX: 2
-    CellSizeY: 1
+    CellSizeY: 2
     CellSizeZ: 2
