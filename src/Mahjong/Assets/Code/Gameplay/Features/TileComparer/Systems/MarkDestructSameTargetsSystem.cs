@@ -28,7 +28,6 @@ namespace Code.Gameplay.Features.TileComparer.Systems
 			foreach (GameEntity level in _levels)
 			{
 				level.ReplaceCurrentTilesCountOnLevel(level.CurrentTilesCountOnLevel - 1);
-				Debug.Log(level.CurrentTilesCountOnLevel);
 				target.isProcessedTarget = true;
 				target.isDestructed = true;
 			}

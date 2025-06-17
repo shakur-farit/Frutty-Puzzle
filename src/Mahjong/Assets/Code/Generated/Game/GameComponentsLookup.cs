@@ -30,15 +30,15 @@ public static class GameComponentsLookup {
     public const int GridLayers = 19;
     public const int GridRows = 20;
     public const int GridTypeId = 21;
-    public const int RhombusLayout = 22;
-    public const int SquareLayout = 23;
-    public const int StarMask = 24;
-    public const int TriangleLayout = 25;
-    public const int XMask = 26;
-    public const int CurrentTilesCountOnLevel = 27;
-    public const int GridTypeOnLevel = 28;
-    public const int LevelAvailable = 29;
-    public const int LevelId = 30;
+    public const int SquareLayout = 22;
+    public const int StarMask = 23;
+    public const int TriangleLayout = 24;
+    public const int XMask = 25;
+    public const int CurrentTilesCountOnLevel = 26;
+    public const int GridTypeOnLevel = 27;
+    public const int LevelAvailable = 28;
+    public const int LevelId = 29;
+    public const int RestartRequested = 30;
     public const int TilePairsOnLevel = 31;
     public const int GenerationRequired = 32;
     public const int LevelSolvable = 33;
@@ -94,7 +94,6 @@ public static class GameComponentsLookup {
         "GridLayers",
         "GridRows",
         "GridTypeId",
-        "RhombusLayout",
         "SquareLayout",
         "StarMask",
         "TriangleLayout",
@@ -103,6 +102,7 @@ public static class GameComponentsLookup {
         "GridTypeOnLevel",
         "LevelAvailable",
         "LevelId",
+        "RestartRequested",
         "TilePairsOnLevel",
         "GenerationRequired",
         "LevelSolvable",
@@ -157,7 +157,6 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Grid.GridLayers),
         typeof(Code.Gameplay.Features.Grid.GridRows),
         typeof(Code.Gameplay.Features.Grid.GridTypeIdComponent),
-        typeof(Code.Gameplay.Features.Grid.RhombusLayout),
         typeof(Code.Gameplay.Features.Grid.SquareLayout),
         typeof(Code.Gameplay.Features.Grid.StarMask),
         typeof(Code.Gameplay.Features.Grid.TriangleLayout),
@@ -166,6 +165,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Level.GridTypeOnLevel),
         typeof(Code.Gameplay.Features.Level.LevelAvailable),
         typeof(Code.Gameplay.Features.Level.LevelIdComponent),
+        typeof(Code.Gameplay.Features.Level.RestartRequested),
         typeof(Code.Gameplay.Features.Level.TilePairsOnLevel),
         typeof(Code.Gameplay.Features.RandomGenerator.GenerationRequired),
         typeof(Code.Gameplay.Features.RandomGenerator.LevelSolvable),

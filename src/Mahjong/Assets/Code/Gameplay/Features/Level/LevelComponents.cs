@@ -10,4 +10,5 @@ namespace Code.Gameplay.Features.Level
 	[Game] public class GridTypeOnLevel : IComponent { public GridTypeId Value; }
 
 	[Game] public class LevelAvailable : IComponent { }
+	[Game] public class RestartRequested : IComponent { }
 }

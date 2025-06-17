@@ -107,12 +107,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - LevelConfig
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c921d89c46957c44daedbbda6cc5f5a9
-    m_Address: Assets/StaticData/Grid/RhombusGridConfig.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - GridConfig
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d2988357c91e4e740bfa57c5aae5fb64
     m_Address: Assets/StaticData/Tiles/ButterTileConfig.asset
     m_ReadOnly: 0

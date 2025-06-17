@@ -1,3 +1,5 @@
+using Code.Common.Entity;
+using Code.Common.Extensions;
 using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
 using Code.Meta.UI.Windows.Service;
@@ -28,6 +30,7 @@ namespace Code.Meta.UI.Windows.Behaviours
 		{
 			_nextLevelButton.onClick.AddListener(StartNextLevel);
 			_nextLevelButton.onClick.AddListener(CloseWindow);
+			_restartLevelButton.onClick.AddListener(RequestRestart);
 		}
 
 		private void StartNextLevel() =>
@@ -35,5 +38,11 @@ namespace Code.Meta.UI.Windows.Behaviours
 
 		private void CloseWindow() =>
 			_windowService.Close(WindowId.Hud);
+
+		private void RequestRestart()
+		{
+			CreateEntity.Empty()
+				.With(x => x.isRestartRequested = true);
+		}
 	}
 }

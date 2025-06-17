@@ -51,13 +51,11 @@ namespace Code.Gameplay.Features.RandomGenerator
 			return result;
 		}
 
-		private TileTypeId[] GetAvailableTypes()
-		{
-			return Enum.GetValues(typeof(TileTypeId))
+		private TileTypeId[] GetAvailableTypes() =>
+			Enum.GetValues(typeof(TileTypeId))
 				.Cast<TileTypeId>()
 				.Where(t => t != TileTypeId.Unknown)
 				.ToArray();
-		}
 
 		private void Shuffle<T>(List<T> list)
 		{

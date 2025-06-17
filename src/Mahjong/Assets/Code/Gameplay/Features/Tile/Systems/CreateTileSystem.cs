@@ -41,6 +41,7 @@ namespace Code.Gameplay.Features.Tile.Systems
 			foreach (GameEntity grid in _grids)
 			{
 				List<TilePosition> list = generator.TilePositions;
+				controller.PositionByTile.Clear();
 
 				foreach (TilePosition tilePositions in list)
 				{

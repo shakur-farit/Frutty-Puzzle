@@ -29,7 +29,6 @@ namespace Code.Gameplay.Features.TileComparer.Systems
 				tile.isSelected = false;
 				tile.isCollectedTarget = false;
 				tile.isNotSame = false;
-				Debug.Log("Unselect");
 			}
 		}
 	}

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: SuareGridConfig
   m_EditorClassIdentifier: 
   Id: 1
-  GridColumns: 6
-  GridRows: 6
-  GridLayers: 2
+  GridColumns: 5
+  GridRows: 5
+  GridLayers: 4
   CellSize:
     CellSizeX: 2
     CellSizeY: 2

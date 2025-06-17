@@ -23,29 +23,21 @@ namespace Code.Gameplay.Features.Grid.Factory
 			switch (id)
 			{
 				case GridTypeId.Square:
-					return CreateFullSquareGrid(id);
-				case GridTypeId.Rhombus:
-					return CreateFullRhombusGrid(id);
+					return CreateSquareGrid(id);
 				case GridTypeId.Triangle:
-					return CreateFullTriangleGrid(id);
+					return CreateTriangleGrid(id);
 			}
 
 			throw new Exception($"Grid with type id {id} does not exist");
 		}
 
-		private GameEntity CreateFullSquareGrid(GridTypeId id) =>
+		private GameEntity CreateSquareGrid(GridTypeId id) =>
 			CreateGridEntity(id)
 				.With(x => x.isSquareLayout= true)
 				.With(x => x.isFullMask =  true)
 			;
 
-		private GameEntity CreateFullRhombusGrid(GridTypeId id) =>
-			CreateGridEntity(id)
-				.With(x => x.isRhombusLayout = true)
-				.With(x => x.isFullMask = true)
-			;
-
-		private GameEntity CreateFullTriangleGrid(GridTypeId id) =>
+		private GameEntity CreateTriangleGrid(GridTypeId id) =>
 			CreateGridEntity(id)
 				.With(x => x.isTriangleLayout = true)
 				.With(x => x.isFullMask = true)

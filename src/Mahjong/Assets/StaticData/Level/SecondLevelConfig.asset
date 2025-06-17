@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SecondLevelConfig
   m_EditorClassIdentifier: 
   Id: 2
-  GridType: 5
-  TilePairs: 12
+  GridType: 2
+  TilePairs: 20

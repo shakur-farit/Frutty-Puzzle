@@ -7,7 +7,9 @@ namespace Code.Gameplay.Features.Tile
 	{
 		public TileFeature(ISystemsFactory systems)
 		{
+			Add(systems.Create<ClearLevelOnRestartRequestedSystem>());
 			Add(systems.Create<CreateTileSystem>());
+			Add(systems.Create<ReplaceCurrentTilesCountOnLevelSystem>());
 		}
 	}
 }
