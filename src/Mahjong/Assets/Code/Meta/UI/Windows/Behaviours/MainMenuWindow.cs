@@ -26,10 +26,12 @@ namespace Code.Meta.UI.Windows.Behaviours
 
 		protected override void Initialize()
 		{
+			_startGameButton.onClick.RemoveAllListeners();
+
 			_startGameButton.onClick.AddListener(EnterToBattle);
 			_startGameButton.onClick.AddListener(CloseWindow);
 		}
-
+		
 		private void EnterToBattle() =>
 			_stateMachine.Enter<LoadingGameplayState, string>(Scenes.Gameplay);
 

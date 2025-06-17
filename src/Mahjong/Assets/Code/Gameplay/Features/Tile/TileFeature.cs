@@ -9,7 +9,6 @@ namespace Code.Gameplay.Features.Tile
 		{
 			Add(systems.Create<ClearLevelOnRestartRequestedSystem>());
 			Add(systems.Create<CreateTileSystem>());
-			Add(systems.Create<ReplaceCurrentTilesCountOnLevelSystem>());
 		}
 	}
 }

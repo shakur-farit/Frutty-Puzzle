@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Entitas;
-using UnityEngine;
 
 namespace Code.Gameplay.Features.TileComparer.Systems
 {
@@ -16,18 +15,12 @@ namespace Code.Gameplay.Features.TileComparer.Systems
 				.AllOf(
 					GameMatcher.Tile,
 					GameMatcher.Same));
-
-			_levels = game.GetGroup(GameMatcher
-				.AllOf(
-					GameMatcher.CurrentTilesCountOnLevel));
 		}
 
 		public void Execute()
 		{
 			foreach (GameEntity target in _targets.GetEntities(_buffer))
-			foreach (GameEntity level in _levels)
 			{
-				level.ReplaceCurrentTilesCountOnLevel(level.CurrentTilesCountOnLevel - 1);
 				target.isProcessedTarget = true;
 				target.isDestructed = true;
 			}

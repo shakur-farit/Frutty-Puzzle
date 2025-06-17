@@ -13,6 +13,7 @@ namespace Code.Gameplay.Features.Tile.Systems
 		private readonly IGroup<GameEntity> _controllers;
 		private readonly List<GameEntity> _buffer = new(1);
 		private readonly IGroup<GameEntity> _grids;
+		private readonly IGroup<GameEntity> _levels;
 
 		public CreateTileSystem(GameContext game, ITileFactory tileFactory)
 		{
@@ -32,10 +33,15 @@ namespace Code.Gameplay.Features.Tile.Systems
 			_controllers = game.GetGroup(GameMatcher
 				.AllOf(
 					GameMatcher.PositionByTile));
+
+			_levels = game.GetGroup(GameMatcher
+				.AllOf(
+					GameMatcher.LevelAvailable));
 		}
 
 		public void Execute()
 		{
+			foreach (GameEntity level in _levels)
 			foreach (GameEntity generator in _generators.GetEntities(_buffer))
 			foreach (GameEntity controller in _controllers)
 			foreach (GameEntity grid in _grids)

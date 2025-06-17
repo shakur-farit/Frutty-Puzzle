@@ -27,7 +27,6 @@ namespace Code.Gameplay.Features.Level.Factory
 				.AddLevelId(id)
 				.AddGridTypeOnLevel(config.GridType)
 				.AddTilePairsOnLevel(config.TilePairs)
-				.AddCurrentTilesCountOnLevel(config.TilePairs * 2)
 				;
 		}
 	}

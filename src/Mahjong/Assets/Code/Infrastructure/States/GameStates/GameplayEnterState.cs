@@ -1,6 +1,5 @@
 using Code.Gameplay.Features.Level;
 using Code.Gameplay.Features.Level.Factory;
-using Code.Gameplay.Features.Tile;
 using Code.Infrastructure.States.StateInfrastructure;
 using Code.Infrastructure.States.StateMachine;
 using Code.Meta.UI.Windows;
@@ -8,6 +7,7 @@ using Code.Meta.UI.Windows.Service;
 using System;
 using System.Linq;
 using Code.Infrastructure.Random;
+using UnityEngine;
 
 namespace Code.Infrastructure.States.GameStates
 {
@@ -38,12 +38,12 @@ namespace Code.Infrastructure.States.GameStates
 			int randomLevelIndex = _random.Range(0, levels.Length);
 
 			_levelFactory.CreateLevel(levels[randomLevelIndex]);
-
+			
 			EnterToBattleLoop();
 		}
 
-		private async void EnterToBattleLoop() =>
-			await _stateMachine.Enter<GameplayLoopState>();
+		private void EnterToBattleLoop() =>
+			_stateMachine.Enter<GameplayLoopState>();
 
 		private LevelId[] GetLevels() =>
 			Enum.GetValues(typeof(LevelId))
