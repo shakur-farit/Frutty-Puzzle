@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 00cc488f608389146b16613c580c1bb4
+  m_SerializeEntries:
+  - m_GUID: 0c3cbec61ae5fed4da045c5b5725b4f2
+    m_Address: Assets/StaticData/Grid/FullTriangleGridConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - GridConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11e09f77635147a4f898727ce379ec95
+    m_Address: Assets/StaticData/AcornTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 149c2c9c18c4ccc41b0523c8d3603873
+    m_Address: Assets/StaticData/Tiles/HamTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1bdcb63ae99b4cd4a9cf24fd106203a4
+    m_Address: Assets/StaticData/Tiles/IceTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3bdf7e14aba266b458a130f41589857a
+    m_Address: Assets/StaticData/Level/FirstLevelConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4590374b45bfe864ea5137f66d70e119
+    m_Address: Assets/StaticData/Tiles/ApplTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52c22a7808d97fe48b345ba20bce4af4
+    m_Address: Assets/StaticData/Tiles/CornTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54135fc0460a9f14096fcf5743b0358e
+    m_Address: Assets/StaticData/Grid/FullSuareGridConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - GridConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69daa487c17f70842b946dd0fc4cecd8
+    m_Address: Assets/StaticData/AmanitaTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 778434b972c325049b2299f8e5fd8e29
+    m_Address: Assets/StaticData/Window/HudWindowConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WindowConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79056185319a58844a142f1c38b95579
+    m_Address: Assets/StaticData/Window/MainMenuWindowConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WindowConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8068128b9ffcf274aaed0ab1cbaa0106
+    m_Address: Assets/StaticData/Tiles/CarrotTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 934a6ef8573faa040806fc9fd7672df2
+    m_Address: Assets/StaticData/Tiles/BeetTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9bf8d16a4c496794cb49d2228689a418
+    m_Address: Assets/StaticData/Tiles/CheeseTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae3d601dd95c2cc4ab5b553ff417e6e7
+    m_Address: Assets/StaticData/Level/SecondLevelConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2988357c91e4e740bfa57c5aae5fb64
+    m_Address: Assets/StaticData/Tiles/ButterTileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TileConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: f7c649ad75609d04bab3e959ebc5a33b, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8ac3b0fbfadf19249b64c9289f6e7c1a, type: 2}
+    - {fileID: 11400000, guid: a1bb3aee3bce3f64bb5912f4f0a59524, type: 2}
